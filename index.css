@@ -1,0 +1,139 @@
+*{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.content{
+    padding: 5rem 2rem 1rem 2rem;
+}
+
+/* USEFUL CLASSES */
+.bg-purple{
+    background-color: darkslateblue;
+}
+
+.purple{
+    color: darkslateblue;
+}
+
+.my-link:hover{
+
+    border-bottom: 2px solid gold;
+    color: gold;
+}
+
+/* NAVBAR */
+nav{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 10rem;
+    justify-content: space-between;
+}
+
+nav .icons-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav .icons-section div{
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-right: 1.4rem;
+}
+
+.icons-section img{
+    height: 1.8rem;
+    margin-right: 0.5rem;
+}
+
+.app-title{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+/* ASIDE (Left Bar) */
+aside{
+    height: 51.5vh;
+    width: 20vw;
+    border: 3px solid darkslateblue;
+    border-radius: 10px;
+    position: fixed;
+}
+
+aside h3{
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+}
+
+/* MAIN */
+main{
+    width: 75vw;
+    margin-left: 21vw;
+}
+
+/* FOOTER */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .app-title{
+    padding: 0.8rem 0;
+    width: 60vw;
+    border-bottom: 2px solid white;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.footer-content{
+    padding: 1rem 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+}
+
+.footer-content div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content h4{
+    padding: 0.5rem;
+    border-radius: 10px;
+    border-bottom: 2px solid white;
+    
+}
+
+.footer-content a{
+    display: block;
+    margin-top: 0.5rem;
+    width: fit-content;
+    border: 2px solid darkslateblue;
+}
+
+.copy-right{
+    background-color: #505050;
+    padding: 0.2rem 0;
+    width: 100vw;
+    color: white;
+    font-weight: bold;
+}

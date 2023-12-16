@@ -1,0 +1,37 @@
+[
+    {
+        "name":"Database Management Systems",
+        "instructor":"Tuğba Süzek",
+        "description":"The Database Management Systems (DBMS) course covers fundamental concepts and practical aspects of managing databases essential in modern IT and business environments. It explores database design, relational databases, SQL query language, data normalization, and security. Students gain skills in utilizing database technologies to solve real-world problems while understanding roles and requirements in data-driven businesses.",
+        "midtermPercent":15,
+        "takerStudents":[200709020, 200709056, 200709044]
+    },
+    {
+        "name":"Mobile Application Development",
+        "instructor":"Özgür Kılıç",
+        "description":"The Mobile Application Development course focuses on equipping students with the knowledge and skills necessary to create innovative mobile applications. Covering mobile platforms, programming languages, user interface design, and development frameworks, this course enables students to understand the intricacies of mobile app creation. Practical projects offer hands-on experience, allowing students to design, build, and deploy mobile apps while addressing contemporary challenges and trends in the mobile technology landscape.",
+        "midtermPercent":40,
+        "takerStudents":[200709020, 200709012, 200709044]
+    },
+    {
+        "name":"Artificial Intelligence",
+        "instructor":"Özgür Kılıç",
+        "description":"The Artificial Intelligence course delves into the foundations and applications of AI technologies. Covering machine learning algorithms, neural networks, natural language processing, and ethical considerations, this course equips students with the understanding and practical skills needed to develop AI-driven solutions. Through projects and case studies, students explore AI's diverse applications while navigating ethical implications, preparing them to innovate responsibly in this rapidly evolving field.",
+        "midtermPercent":50,
+        "takerStudents":[200709020, 200709056, 200709044]
+    },
+    {
+        "name":"Web Development",
+        "instructor":"Bekir Taner Dinçer",
+        "description":"The Web Development course provides a comprehensive understanding of creating dynamic and responsive websites. Covering HTML, CSS, JavaScript, frameworks, and backend technologies, students learn to design and build interactive web applications. Practical projects offer hands-on experience in developing user-friendly and visually appealing websites, preparing students for the diverse demands of the web development industry.",
+        "midtermPercent":30,
+        "takerStudents":[200709056, 200709012, 200709044]
+    },
+    {
+        "name":"Computer Networks",
+        "instructor":"Enis Karaarslan",
+        "description":"The Computer Networks course offers an in-depth exploration of network architectures, protocols, and communication systems. Covering topics such as TCP/IP, network security, wireless and wired networks, and data transmission, this course equips students with the knowledge to design, manage, and troubleshoot modern networks. Through practical exercises and case studies, students gain hands-on experience in configuring networks, understanding their operation, and addressing security concerns, preparing them for roles in the dynamic field of computer networking.",
+        "midtermPercent":45,
+        "takerStudents":[200709056, 200709012]
+    }
+]

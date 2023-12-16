@@ -1,0 +1,30 @@
+[
+    {
+        "name":"Deniz",
+        "surname":"Bilgin",
+        "studentId":200709020,
+        "takenCourses":["Database Management Systems", "Mobile Application Development", "Artificial Intelligence"],
+        "grades":[[70,90],[15,88],[100,100]]
+    },
+    {
+        "name":"Serdar",
+        "surname":"Yıldız",
+        "studentId":200709056,
+        "takenCourses":["Database Management Systems", "Artificial Intelligence", "Web Development", "Computer Networks"],
+        "grades":[[66,74],[90,47],[58,13],[78,90]]
+    },
+    {
+        "name":"Gökay",
+        "surname":"Baydemir",
+        "studentId":200709012,
+        "takenCourses":["Mobile Application Development", "Computer Networks", "Web Development"],
+        "grades":[[94,91],[51,68],[10,0]]
+    },
+    {
+        "name":"Baran",
+        "surname":"İşçi",
+        "studentId":200709044,
+        "takenCourses":["Mobile Application Development", "Database Management Systems", "Artificial Intelligence", "Web Development"],
+        "grades":[[74,34],[61,88],[80,100]]
+    }
+]
