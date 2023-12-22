@@ -1,10 +1,14 @@
-class Course{
-    constructor(name, instructor, description, midtermPercent, takerStudents){
+import { StudentsDatabase } from "./StudentDatabase.js";
+
+export class Course{
+    constructor(courseId, name, instructor, description, midtermPercent, acts, isTenBased){
+        this.courseId = courseId;
         this.name = name;
         this.instructor = instructor;
         this.description = description;
         this.midtermPercent = midtermPercent;
-        this.takerStudents = takerStudents;
+        this.acts = acts;
+        this.isTenBased = isTenBased;
         this.finalPercent = 100 - midtermPercent;
     }
 
@@ -13,25 +17,34 @@ class Course{
                         ", percenty of final exam is " + this.finalPercent + ". Finally description of the course is: \n" + this.description + ".";
         return text;
     }
-}
 
-export class CoursesDatabase{
-    constructor(courses){
-        this.courses = [];
-        this.setCoursesJSON(courses);
-        console.log(this.courses);
-    }
-
-    setCoursesJSON(courses){
-        for (let i = 0; i < courses.length; i++) {
-            var takers = [];
-
-            this.courses.push(new Course(
-                courses[i].name,
-                courses[i].instructor,
-                courses[i].description,
-                courses[i].midtermPercent,
-                courses[i].takerStudents));
+    getStudents(){
+        var result = [];
+        var students = new StudentsDatabase().students;
+        for (let i = 0; i < students.length; i++) {
+            for (let j = 0; j < students[i].takenCourses.length; j++) {
+                if (students[i].takenCourses[j] == this.courseId) {
+                    result.push(students[i]);
+                }
+            }
         }
+        return result;
+    }
+
+    getNumberOfStudents(){
+        return this.getStudents(this.courseId).length;
+    }
+
+    getAverageScore(){
+        var total = 0;
+        var numberOfStudents = 0;
+        var students = this.getStudents(this.courseId);
+        for (let i = 0; i < students.length; i++) {
+            var gradeAverageOfStudent = students[i].getGradeAverageByCourse(this.courseId);
+            total += gradeAverageOfStudent;
+            numberOfStudents++;
+        }
+        return total/numberOfStudents;
     }
 }
+

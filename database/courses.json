@@ -1,37 +1,74 @@
 [
     {
+        "courseId":0,
         "name":"Database Management Systems",
         "instructor":"Tuğba Süzek",
+        "acts":6,
         "description":"The Database Management Systems (DBMS) course covers fundamental concepts and practical aspects of managing databases essential in modern IT and business environments. It explores database design, relational databases, SQL query language, data normalization, and security. Students gain skills in utilizing database technologies to solve real-world problems while understanding roles and requirements in data-driven businesses.",
         "midtermPercent":15,
-        "takerStudents":[200709020, 200709056, 200709044]
+        "isTenBased": true
     },
     {
+        "courseId":1,
         "name":"Mobile Application Development",
         "instructor":"Özgür Kılıç",
+        "acts":6,
         "description":"The Mobile Application Development course focuses on equipping students with the knowledge and skills necessary to create innovative mobile applications. Covering mobile platforms, programming languages, user interface design, and development frameworks, this course enables students to understand the intricacies of mobile app creation. Practical projects offer hands-on experience, allowing students to design, build, and deploy mobile apps while addressing contemporary challenges and trends in the mobile technology landscape.",
         "midtermPercent":40,
-        "takerStudents":[200709020, 200709012, 200709044]
+        "isTenBased": false
     },
     {
+        "courseId":2,
         "name":"Artificial Intelligence",
         "instructor":"Özgür Kılıç",
+        "acts":6,
         "description":"The Artificial Intelligence course delves into the foundations and applications of AI technologies. Covering machine learning algorithms, neural networks, natural language processing, and ethical considerations, this course equips students with the understanding and practical skills needed to develop AI-driven solutions. Through projects and case studies, students explore AI's diverse applications while navigating ethical implications, preparing them to innovate responsibly in this rapidly evolving field.",
         "midtermPercent":50,
-        "takerStudents":[200709020, 200709056, 200709044]
+        "isTenBased": true
     },
     {
+        "courseId":3,
         "name":"Web Development",
         "instructor":"Bekir Taner Dinçer",
+        "acts":6,
         "description":"The Web Development course provides a comprehensive understanding of creating dynamic and responsive websites. Covering HTML, CSS, JavaScript, frameworks, and backend technologies, students learn to design and build interactive web applications. Practical projects offer hands-on experience in developing user-friendly and visually appealing websites, preparing students for the diverse demands of the web development industry.",
         "midtermPercent":30,
-        "takerStudents":[200709056, 200709012, 200709044]
+        "isTenBased": false
     },
     {
+        "courseId":4,
         "name":"Computer Networks",
         "instructor":"Enis Karaarslan",
+        "acts":6,
         "description":"The Computer Networks course offers an in-depth exploration of network architectures, protocols, and communication systems. Covering topics such as TCP/IP, network security, wireless and wired networks, and data transmission, this course equips students with the knowledge to design, manage, and troubleshoot modern networks. Through practical exercises and case studies, students gain hands-on experience in configuring networks, understanding their operation, and addressing security concerns, preparing them for roles in the dynamic field of computer networking.",
         "midtermPercent":45,
-        "takerStudents":[200709056, 200709012]
+        "isTenBased": false
+    },
+    {
+        "courseId":5,
+        "name":"Principles of Kemal Atatürk",
+        "instructor":"Tuğba Çalışkan",
+        "acts":2,
+        "description":"Atatürk, the founder of modern Turkey, implemented a series of revolutionary reforms known as 'İnkılapları.' These reforms aimed to modernize Turkey by introducing a new alphabet, granting equal rights to women, secularizing education and the legal system, and promoting industrialization. Atatürk's vision transformed Turkey into a more progressive and forward-looking society, leaving a lasting impact on its identity and development.",
+        "midtermPercent":40,
+        "isTenBased": true
+    },
+    {
+        "courseId":6,
+        "name":"Decentralized Systems",
+        "instructor":"Enis Karaarslan",
+        "acts":6,
+        "description":"Decentralized systems distribute authority and data across multiple points rather than relying on a central authority. They enhance security, transparency, and resilience by eliminating a single point of control. These systems, often associated with blockchain technology, enable peer-to-peer interactions and have transformative impacts on finance, governance, and technology by revolutionizing data storage, transactions, and overall system operations.",
+        "midtermPercent":30,
+        "isTenBased": false
+    },
+    {
+        "courseId":7,
+        "name":"Turkish",
+        "instructor":"Fatma Ayan",
+        "acts":2,
+        "description":"Turkish is the native language of Turkey and is spoken by millions worldwide. It's part of the Turkic language family and uses the Latin alphabet. Its grammar involves suffixes heavily and has a relatively simple phonetic structure. The vocabulary blends native Turkic words with influences from Arabic, Persian, and French.",
+        "midtermPercent":40,
+        "isTenBased": true
     }
 ]
