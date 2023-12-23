@@ -30,6 +30,36 @@ a{
     color: gold;
 }
 
+.accordion{
+    cursor: pointer;
+    background-color: #eeeeee;
+    color: #444444;
+    padding: 1rem 0;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover{
+    background-color: #cccccc;
+}
+
+.panel{
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.accordion::after{
+    content: '\02795';
+    font-size: 0.8rem;
+    margin: 0 1rem;
+    color: #777777;
+    float: right;
+}
+
+.active::after{
+    content: "\2796";
+}
+
 /* NAVBAR */
 nav{
     position: fixed;
@@ -71,20 +101,40 @@ nav .icons-section div{
 aside{
     height: 51.5vh;
     width: 20vw;
-    border: 3px solid darkslateblue;
-    border-radius: 10px;
     position: fixed;
 }
 
 aside h3{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
     font-size: 1.3rem;
-    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    color: white;
 }
+
+aside .panel div{
+    padding: 0.7rem 0;
+    font-style: italic;
+    cursor: pointer;
+}
+
+aside .panel div:hover{
+    background-color: #eeeeee;
+}
+
 
 /* MAIN */
 main{
-    width: 75vw;
-    margin-left: 21vw;
+    width: 70vw;
+    margin-left: 22vw;
+}
+
+.category{
+    display: none;
+}
+
+.category-active{
+    display: block;
 }
 
 /* FOOTER */

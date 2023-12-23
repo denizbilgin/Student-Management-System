@@ -1,0 +1,30 @@
+#get-all-students h1{
+    color: darkslateblue;
+}
+
+#get-all-students .about-paragraph{
+    text-align: left;
+    margin: 1rem 0;
+}
+
+#students-table{
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+#students-table th {
+    background-color: darkslateblue;
+    color: white;
+}
+
+#students-table td, th {
+    border: 1px solid #c7c7c7;
+    text-align: left;
+    padding: 8px;
+}
+
+#students-table tr:nth-child(even) {
+    background-color: #dddddd;
+}

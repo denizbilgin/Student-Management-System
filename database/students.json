@@ -147,8 +147,8 @@
         ]
     },
     {
-        "name": "Mehmet Akif",
-        "surname": "Albayrak",
+        "name": "Sefa",
+        "surname": "Çelebi",
         "studentId": 200709014,
         "takenCourses": [0, 2, 4],
         "grades": [
@@ -164,9 +164,9 @@
         "takenCourses": [0, 1, 2, 3],
         "grades": [
           [65, 30],
-          [55, 70],
+          [85, 70],
           [60, 40],
-          [70, 45]
+          [70, 75]
         ]
     },
     {
@@ -175,10 +175,10 @@
         "studentId": 200709016,
         "takenCourses": [1, 3, 5, 7],
         "grades": [
-          [70, 35],
+          [70, 85],
           [68, 55],
-          [72, 60],
-          [67, 40]
+          [72, 90],
+          [67, 100]
         ]
     },
     {
@@ -187,9 +187,9 @@
         "studentId": 200709017,
         "takenCourses": [2, 4, 6],
         "grades": [
-          [75, 50],
+          [85, 80],
           [65, 42],
-          [68, 38]
+          [98, 78]
         ]
     },
     {
@@ -198,8 +198,8 @@
         "studentId": 200709018,
         "takenCourses": [3, 5],
         "grades": [
-          [73, 48],
-          [68, 50]
+          [93, 80],
+          [100, 100]
         ]
     },
     {
@@ -220,254 +220,254 @@
         "takenCourses":[0, 1, 2, 3, 4, 5],
         "grades":[
             [70, 90],
-            [53, 88],
+            [73, 88],
             [100, 100],
-            [69, 97],
+            [89, 97],
             [75, 79],
             [74, 90]
         ]
     },
     {
-        "name": "Derin",
-        "surname": "Günce",
-        "studentId": 200709021,
-        "takenCourses": [0, 3, 5],
-        "grades": [
-          [60, 45],
-          [64, 50],
-          [70, 35]
-        ]
+      "name": "Derin",
+      "surname": "Günce",
+      "studentId": 200709021,
+      "takenCourses": [0, 3, 5],
+      "grades": [
+          [71, 82],
+          [90, 74],
+          [79, 95]
+      ]
     },
     {
-        "name": "Beyza",
-        "surname": "Yılmaz",
-        "studentId": 200709022,
-        "takenCourses": [2, 4, 6],
-        "grades": [
-          [70, 38],
-          [63, 48],
-          [68, 40]
-        ]
+      "name": "Beyza",
+      "surname": "Yılmaz",
+      "studentId": 200709022,
+      "takenCourses": [2, 4, 6],
+      "grades": [
+          [98, 81],
+          [85, 91],
+          [72, 77]
+      ]
     },
     {
-        "name": "Begüm",
-        "surname": "Başovalı",
-        "studentId": 200709023,
-        "takenCourses": [1, 3, 7],
-        "grades": [
-          [74, 32],
-          [65, 50],
-          [70, 30]
-        ]
+      "name": "Begüm",
+      "surname": "Başovalı",
+      "studentId": 200709023,
+      "takenCourses": [1, 3, 7],
+      "grades": [
+          [79, 95],
+          [71, 88],
+          [89, 75]
+      ]
     },
     {
-        "name": "Ahmet",
-        "surname": "Demir",
-        "studentId": 200709024,
-        "takenCourses": [0, 2, 5],
-        "grades": [
-          [67, 35],
-          [60, 48],
-          [65, 40]
-        ]
+      "name": "Ahmet",
+      "surname": "Demir",
+      "studentId": 200709024,
+      "takenCourses": [0, 2, 5],
+      "grades": [
+          [68, 70],
+          [84, 78],
+          [79, 77]
+      ]
     },
     {
-        "name": "Mert",
-        "surname": "Serinciden",
-        "studentId": 200709025,
-        "takenCourses": [3, 4, 6],
-        "grades": [
-          [68, 30],
-          [63, 42],
-          [67, 35]
-        ]
+      "name": "Mert",
+      "surname": "Serinciden",
+      "studentId": 200709025,
+      "takenCourses": [3, 4, 6],
+      "grades": [
+          [74, 68],
+          [80, 73],
+          [76, 67]
+      ]
     },
     {
-        "name": "Ahmet",
-        "surname": "Yılmaz",
-        "studentId": 200709026,
-        "takenCourses": [1, 5, 7],
-        "grades": [
-          [72, 34],
-          [66, 40],
-          [70, 32]
-        ]
+      "name": "Ahmet",
+      "surname": "Yılmaz",
+      "studentId": 200709026,
+      "takenCourses": [1, 5, 7],
+      "grades": [
+          [84, 69],
+          [78, 76],
+          [74, 68]
+      ]
     },
     {
-        "name": "Mauro",
-        "surname": "Icardi",
-        "studentId": 200709027,
-        "takenCourses": [0, 2, 4],
-        "grades": [
-          [65, 38],
-          [62, 45],
-          [68, 30]
-        ]
+      "name": "Mauro",
+      "surname": "Icardi",
+      "studentId": 200709027,
+      "takenCourses": [0, 2, 4],
+      "grades": [
+          [69, 80],
+          [70, 71],
+          [80, 65]
+      ]
     },
     {
-        "name": "Ahmet",
-        "surname": "Kiraz",
-        "studentId": 200709027,
-        "takenCourses": [0, 1, 2, 3],
-        "grades": [
-          [65, 30],
-          [55, 70],
-          [60, 40],
-          [70, 45]
-        ]
+      "name": "Ahmet",
+      "surname": "Kiraz",
+      "studentId": 200709027,
+      "takenCourses": [0, 1, 2, 3],
+      "grades": [
+          [71, 69],
+          [79, 86],
+          [66, 78],
+          [91, 83]
+      ]
     },
     {
-        "name": "Seda",
-        "surname": "Kendirci",
-        "studentId": 200709028,
-        "takenCourses": [1, 3, 5, 7],
-        "grades": [
-          [70, 35],
-          [68, 55],
-          [72, 60],
-          [67, 40]
-        ]
+      "name": "Seda",
+      "surname": "Kendirci",
+      "studentId": 200709028,
+      "takenCourses": [1, 3, 5, 7],
+      "grades": [
+          [74, 76],
+          [82, 95],
+          [70, 85],
+          [78, 74]
+      ]
     },
     {
-        "name": "Winston",
-        "surname": "Churchill",
-        "studentId": 200709029,
-        "takenCourses": [2, 4, 6],
-        "grades": [
-          [75, 50],
-          [65, 42],
-          [68, 38]
-        ]
+      "name": "Winston",
+      "surname": "Churchill",
+      "studentId": 200709029,
+      "takenCourses": [2, 4, 6],
+      "grades": [
+          [80, 87],
+          [73, 79],
+          [76, 73]
+      ]
     },
     {
-        "name": "Ahu",
-        "surname": "Yılmaz",
-        "studentId": 200709030,
-        "takenCourses": [3, 5],
-        "grades": [
-          [73, 48],
-          [68, 50]
-        ]
+      "name": "Ahu",
+      "surname": "Yılmaz",
+      "studentId": 200709030,
+      "takenCourses": [3, 5],
+      "grades": [
+          [77, 89],
+          [82, 91]
+      ]
     },
     {
-        "name": "Merve",
-        "surname": "Ak",
-        "studentId": 200709031,
-        "takenCourses": [0, 2, 6],
-        "grades": [
-          [68, 32],
-          [60, 55],
-          [65, 45]
-        ]
+      "name": "Merve",
+      "surname": "Ak",
+      "studentId": 200709031,
+      "takenCourses": [0, 2, 6],
+      "grades": [
+          [76, 72],
+          [71, 87],
+          [78, 81]
+      ]
     },
     {
-        "name": "Deniz",
-        "surname": "Palacı",
-        "studentId": 200709032,
-        "takenCourses": [1, 4, 7],
-        "grades": [
-          [72, 40],
-          [62, 58],
-          [68, 48]
-        ]
+      "name": "Deniz",
+      "surname": "Palacı",
+      "studentId": 200709032,
+      "takenCourses": [1, 4, 7],
+      "grades": [
+          [82, 78],
+          [73, 89],
+          [76, 83]
+      ]
+   },
+   {
+      "name": "Polat",
+      "surname": "Alemdar",
+      "studentId": 200709033,
+      "takenCourses": [0, 3, 5],
+      "grades": [
+          [70, 76],
+          [74, 82],
+          [81, 67]
+      ]
     },
     {
-        "name": "Polat",
-        "surname": "Alemdar",
-        "studentId": 200709033,
-        "takenCourses": [0, 3, 5],
-        "grades": [
-          [60, 45],
-          [64, 50],
-          [70, 35]
-        ]
+      "name": "Sıla",
+      "surname": "Gençoğlu",
+      "studentId": 200709034,
+      "takenCourses": [2, 4, 6],
+      "grades": [
+          [80, 78],
+          [75, 84],
+          [72, 79]
+      ]
+   },
+   {
+      "name": "Batuhan",
+      "surname": "Iska",
+      "studentId": 200709035,
+      "takenCourses": [1, 3, 7],
+      "grades": [
+          [85, 70],
+          [79, 88],
+          [74, 65]
+      ]
+   },
+   {
+      "name": "Melis",
+      "surname": "Koç",
+      "studentId": 200709036,
+      "takenCourses": [0, 2, 5],
+      "grades": [
+          [70, 69],
+          [87, 77],
+          [79, 72]
+      ]
+   },
+    {
+      "name": "Dilara",
+      "surname": "Santa",
+      "studentId": 200709037,
+      "takenCourses": [3, 4, 6],
+      "grades": [
+          [73, 67],
+          [81, 73],
+          [76, 69]
+      ]
     },
     {
-        "name": "Sıla",
-        "surname": "Gençoğlu",
-        "studentId": 200709034,
-        "takenCourses": [2, 4, 6],
-        "grades": [
-          [70, 38],
-          [63, 48],
-          [68, 40]
-        ]
+      "name": "Ali",
+      "surname": "Pehlivan",
+      "studentId": 200709038,
+      "takenCourses": [1, 5, 7],
+      "grades": [
+          [81, 71],
+          [77, 76],
+          [74, 68]
+      ]
     },
     {
-        "name": "Batuhan",
-        "surname": "Iska",
-        "studentId": 200709035,
-        "takenCourses": [1, 3, 7],
-        "grades": [
-          [74, 32],
-          [65, 50],
-          [70, 30]
-        ]
+      "name": "Zeynep Naz",
+      "surname": "Halil",
+      "studentId": 200709039,
+      "takenCourses": [0, 2, 4],
+      "grades": [
+          [69, 81],
+          [70, 74],
+          [80, 65]
+      ]
     },
     {
-        "name": "Melis",
-        "surname": "Koç",
-        "studentId": 200709036,
-        "takenCourses": [0, 2, 5],
-        "grades": [
-          [67, 35],
-          [60, 48],
-          [65, 40]
-        ]
+      "name": "Barış",
+      "surname": "Aygün",
+      "studentId": 200709040,
+      "takenCourses": [3, 5],
+      "grades": [
+          [78, 84],
+          [76, 89]
+      ]
     },
     {
-        "name": "Dilara",
-        "surname": "Santa",
-        "studentId": 200709037,
-        "takenCourses": [3, 4, 6],
-        "grades": [
-          [68, 30],
-          [63, 42],
-          [67, 35]
-        ]
-    },
-    {
-        "name": "Ali",
-        "surname": "Pehlivan",
-        "studentId": 200709038,
-        "takenCourses": [1, 5, 7],
-        "grades": [
-          [72, 34],
-          [66, 40],
-          [70, 32]
-        ]
-    },
-    {
-        "name": "Zeynep Naz",
-        "surname": "Halil",
-        "studentId": 200709039,
-        "takenCourses": [0, 2, 4],
-        "grades": [
-          [65, 38],
-          [62, 45],
-          [68, 30]
-        ]
-    },
-    {
-        "name": "Barış",
-        "surname": "Aygün",
-        "studentId": 200709040,
-        "takenCourses": [3, 5],
-        "grades": [
-          [70, 45],
-          [68, 50]
-        ]
-    },
-    {
-        "name": "Bedirhan",
-        "surname": "Kuyucu",
-        "studentId": 200709041,
-        "takenCourses": [0, 1, 6],
-        "grades": [
-          [68, 30],
-          [60, 55],
-          [65, 45]
-        ]
+      "name": "Bedirhan",
+      "surname": "Kuyucu",
+      "studentId": 200709041,
+      "takenCourses": [0, 1, 6],
+      "grades": [
+          [76, 66],
+          [74, 83],
+          [79, 78]
+      ]
     },
     {
         "name": "Eren",
@@ -481,238 +481,238 @@
         ]
     },
     {
-        "name": "Ali",
-        "surname": "Yılmaz",
-        "studentId": 200709042,
-        "takenCourses": [0, 1, 2, 3],
-        "grades": [
-          [65, 30],
-          [55, 70],
-          [60, 40],
-          [70, 45]
-        ]
+      "name": "Ali",
+      "surname": "Yılmaz",
+      "studentId": 200709042,
+      "takenCourses": [0, 1, 2, 3],
+      "grades": [
+          [83, 94],
+          [72, 87],
+          [84, 91],
+          [78, 89]
+      ]
     },
     {
-        "name": "Ayşe",
-        "surname": "Demir",
-        "studentId": 200709043,
-        "takenCourses": [1, 3, 5, 7],
-        "grades": [
-          [70, 35],
-          [68, 55],
-          [72, 60],
-          [67, 40]
-        ]
+      "name": "Ayşe",
+      "surname": "Demir",
+      "studentId": 200709043,
+      "takenCourses": [1, 3, 5, 7],
+      "grades": [
+          [79, 71],
+          [88, 78],
+          [73, 92],
+          [80, 75]
+      ]
     },
     {
-        "name": "Ahmet",
-        "surname": "Kaya",
-        "studentId": 200709044,
-        "takenCourses": [2, 4, 6],
-        "grades": [
-          [75, 50],
-          [65, 42],
-          [68, 38]
-        ]
+      "name": "Ahmet",
+      "surname": "Kaya",
+      "studentId": 200709044,
+      "takenCourses": [2, 4, 6],
+      "grades": [
+          [88, 82],
+          [71, 88],
+          [76, 77]
+      ]
     },
     {
-        "name": "Fatma",
-        "surname": "Öztürk",
-        "studentId": 200709045,
-        "takenCourses": [3, 5],
-        "grades": [
-          [73, 48],
-          [68, 50]
-        ]
+      "name": "Fatma",
+      "surname": "Öztürk",
+      "studentId": 200709045,
+      "takenCourses": [3, 5],
+      "grades": [
+          [85, 78],
+          [90, 73]
+      ]
     },
     {
-        "name": "Mehmet",
-        "surname": "Arslan",
-        "studentId": 200709046,
-        "takenCourses": [0, 2, 6],
-        "grades": [
-          [68, 32],
-          [60, 55],
-          [65, 45]
-        ]
+      "name": "Mehmet",
+      "surname": "Arslan",
+      "studentId": 200709046,
+      "takenCourses": [0, 2, 6],
+      "grades": [
+          [78, 70],
+          [86, 65],
+          [88, 75]
+      ]
     },
     {
-        "name": "Zeynep",
-        "surname": "Koç",
-        "studentId": 200709047,
-        "takenCourses": [1, 4, 7],
-        "grades": [
-          [72, 40],
-          [62, 58],
-          [68, 48]
-        ]
+      "name": "Zeynep",
+      "surname": "Koç",
+      "studentId": 200709047,
+      "takenCourses": [1, 4, 7],
+      "grades": [
+          [81, 62],
+          [75, 68],
+          [79, 70]
+      ]
     },
     {
-        "name": "Mustafa",
-        "surname": "Şahin",
-        "studentId": 200709048,
-        "takenCourses": [0, 3, 5],
-        "grades": [
-          [60, 45],
-          [64, 50],
-          [70, 35]
-        ]
+      "name": "Mustafa",
+      "surname": "Şahin",
+      "studentId": 200709048,
+      "takenCourses": [0, 3, 5],
+      "grades": [
+          [75, 75],
+          [82, 78],
+          [89, 70]
+      ]
     },
     {
-        "name": "Elif",
-        "surname": "Erdoğan",
-        "studentId": 200709049,
-        "takenCourses": [2, 4, 6],
-        "grades": [
-          [70, 38],
-          [63, 48],
-          [68, 40]
-        ]
+      "name": "Elif",
+      "surname": "Erdoğan",
+      "studentId": 200709049,
+      "takenCourses": [2, 4, 6],
+      "grades": [
+          [73, 65],
+          [67, 70],
+          [74, 68]
+      ]
     },
     {
-        "name": "Emre",
-        "surname": "Can",
-        "studentId": 200709050,
-        "takenCourses": [1, 3, 7],
-        "grades": [
-          [74, 32],
-          [65, 50],
-          [70, 30]
-        ]
+      "name": "Emre",
+      "surname": "Can",
+      "studentId": 200709050,
+      "takenCourses": [1, 3, 7],
+      "grades": [
+          [80, 67],
+          [75, 75],
+          [78, 65]
+      ]
     },
     {
-        "name":"Serdar",
-        "surname":"Yıldız",
-        "studentId":200709051,
-        "takenCourses":[0, 2, 3, 4, 6],
-        "grades":[
-            [66, 74]
-            ,[90, 47],
-            [58, 13],
-            [78, 90],
-            [96, 80]
-        ]
+      "name": "Serdar",
+      "surname": "Yıldız",
+      "studentId": 200709051,
+      "takenCourses": [0, 2, 3, 4, 6],
+      "grades": [
+          [75, 74],
+          [85, 67],
+          [68, 69],
+          [82, 90],
+          [98, 80]
+      ]
     },
     {
-        "name": "Cem",
-        "surname": "Aksoy",
-        "studentId": 200709052,
-        "takenCourses": [3, 4, 6],
-        "grades": [
-          [68, 30],
-          [63, 42],
-          [67, 35]
-        ]
+      "name": "Cem",
+      "surname": "Aksoy",
+      "studentId": 200709052,
+      "takenCourses": [3, 4, 6],
+      "grades": [
+          [75, 65],
+          [67, 70],
+          [71, 67]
+      ]
     },
     {
-        "name": "Esra",
-        "surname": "Güler",
-        "studentId": 200709053,
-        "takenCourses": [1, 5, 7],
-        "grades": [
-          [72, 34],
-          [66, 40],
-          [70, 32]
-        ]
+      "name": "Esra",
+      "surname": "Güler",
+      "studentId": 200709053,
+      "takenCourses": [1, 5, 7],
+      "grades": [
+          [78, 68],
+          [74, 72],
+          [79, 65]
+      ]
     },
     {
-        "name":"Baran",
-        "surname":"İşçi",
-        "studentId":200709054,
-        "takenCourses":[0, 1, 2, 3, 7],
-        "grades":[
-            [74, 34],
-            [61, 88],
-            [80, 100],
-            [98, 78],
-            [46, 59]
-        ]
+      "name": "Baran",
+      "surname": "İşçi",
+      "studentId": 200709054,
+      "takenCourses": [0, 1, 2, 3, 7],
+      "grades": [
+          [79, 71],
+          [76, 88],
+          [83, 95],
+          [94, 78],
+          [72, 71]
+      ]
     },
     {
-        "name": "Buse",
-        "surname": "Kurt",
-        "studentId": 200709055,
-        "takenCourses": [3, 5],
-        "grades": [
-          [70, 45],
-          [68, 50]
-        ]
+      "name": "Buse",
+      "surname": "Kurt",
+      "studentId": 200709055,
+      "takenCourses": [3, 5],
+      "grades": [
+          [78, 75],
+          [75, 80]
+      ]
     },
     {
-        "name": "Efe",
-        "surname": "Aydın",
-        "studentId": 200709056,
-        "takenCourses": [0, 1, 6],
-        "grades": [
-          [68, 30],
-          [60, 55],
-          [65, 45]
-        ]
+      "name": "Efe",
+      "surname": "Aydın",
+      "studentId": 200709056,
+      "takenCourses": [0, 1, 6],
+      "grades": [
+          [72, 65],
+          [75, 80],
+          [68, 75]
+      ]
     },
     {
-        "name": "Duygu",
-        "surname": "Çelik",
-        "studentId": 200709057,
-        "takenCourses": [2, 3, 7],
-        "grades": [
-          [65, 30],
-          [55, 70],
-          [60, 40]
-        ]
+      "name": "Duygu",
+      "surname": "Çelik",
+      "studentId": 200709057,
+      "takenCourses": [2, 3, 7],
+      "grades": [
+          [68, 65],
+          [78, 70],
+          [72, 67]
+      ]
     },
     {
-        "name": "Furkan",
-        "surname": "Turan",
-        "studentId": 200709058,
-        "takenCourses": [1, 2, 5],
-        "grades": [
-          [70, 35],
-          [68, 55],
-          [72, 60]
-        ]
+      "name": "Furkan",
+      "surname": "Turan",
+      "studentId": 200709058,
+      "takenCourses": [1, 2, 5],
+      "grades": [
+          [73, 67],
+          [78, 85],
+          [75, 70]
+      ]
     },
     {
-        "name": "Gizem",
-        "surname": "Aslan",
-        "studentId": 200709059,
-        "takenCourses": [3, 4],
-        "grades": [
-          [73, 48],
-          [68, 50]
-        ]
+      "name": "Gizem",
+      "surname": "Aslan",
+      "studentId": 200709059,
+      "takenCourses": [3, 4],
+      "grades": [
+          [76, 78],
+          [71, 75]
+      ]
     },
     {
-        "name": "İbrahim",
-        "surname": "Şimşek",
-        "studentId": 200709060,
-        "takenCourses": [0, 2, 6],
-        "grades": [
-          [68, 32],
-          [60, 55],
-          [65, 45]
-        ]
+      "name": "İbrahim",
+      "surname": "Şimşek",
+      "studentId": 200709060,
+      "takenCourses": [0, 2, 6],
+      "grades": [
+          [72, 68],
+          [65, 75],
+          [70, 65]
+      ]
     },
     {
-        "name": "Selin",
-        "surname": "Yıldız",
-        "studentId": 200709061,
-        "takenCourses": [0, 2, 5],
-        "grades": [
-          [67, 35],
-          [60, 48],
-          [65, 40]
-        ]
+      "name": "Selin",
+      "surname": "Yıldız",
+      "studentId": 200709061,
+      "takenCourses": [0, 2, 5],
+      "grades": [
+          [71, 70],
+          [64, 68],
+          [68, 65]
+      ]
     },
     {
-        "name": "Burak",
-        "surname": "Yılmaz",
-        "studentId": 200709062,
-        "takenCourses": [0, 2, 4],
-        "grades": [
-          [65, 38],
-          [62, 45],
-          [68, 30]
-        ]
+      "name": "Burak",
+      "surname": "Yılmaz",
+      "studentId": 200709062,
+      "takenCourses": [0, 2, 4],
+      "grades": [
+          [68, 75],
+          [70, 72],
+          [65, 67]
+      ]
     },
     {
       "name": "Can",
@@ -733,10 +733,10 @@
       "studentId": 200709063,
       "takenCourses": [1, 3, 5, 7],
       "grades": [
-        [100, 65],
-        [88, 55],
-        [72, 100],
-        [67, 40]
+          [92, 80],
+          [89, 98],
+          [94, 81],
+          [85, 93]
       ]
     },
     {
@@ -745,9 +745,9 @@
       "studentId": 200709064,
       "takenCourses": [2, 4, 6],
       "grades": [
-        [75, 50],
-        [65, 42],
-        [68, 38]
+          [82, 88],
+          [87, 90],
+          [93, 79]
       ]
     },
     {
@@ -756,8 +756,8 @@
       "studentId": 200709065,
       "takenCourses": [3, 5],
       "grades": [
-        [73, 48],
-        [68, 50]
+          [82, 91],
+          [96, 85]
       ]
     },
     {
@@ -766,9 +766,9 @@
       "studentId": 200709066,
       "takenCourses": [0, 2, 6],
       "grades": [
-        [68, 32],
-        [60, 55],
-        [65, 45]
+          [77, 98],
+          [83, 84],
+          [86, 92]
       ]
     },
     {
@@ -777,9 +777,9 @@
       "studentId": 200709067,
       "takenCourses": [1, 4, 7],
       "grades": [
-        [72, 40],
-        [62, 58],
-        [68, 48]
+          [89, 77],
+          [95, 81],
+          [80, 90]
       ]
     },
     {
@@ -788,9 +788,9 @@
       "studentId": 200709068,
       "takenCourses": [0, 3, 5],
       "grades": [
-        [60, 45],
-        [64, 50],
-        [70, 35]
+          [88, 96],
+          [91, 84],
+          [94, 88]
       ]
     },
     {
@@ -799,9 +799,9 @@
       "studentId": 200709069,
       "takenCourses": [2, 4, 6],
       "grades": [
-        [70, 38],
-        [63, 48],
-        [68, 40]
+          [76, 82],
+          [94, 89],
+          [85, 90]
       ]
     },
     {
@@ -810,9 +810,9 @@
       "studentId": 200709070,
       "takenCourses": [1, 3, 7],
       "grades": [
-        [74, 32],
-        [65, 50],
-        [70, 30]
+          [85, 79],
+          [92, 76],
+          [88, 77]
       ]
     },
     {
@@ -821,9 +821,9 @@
       "studentId": 200709071,
       "takenCourses": [0, 2, 5],
       "grades": [
-        [67, 35],
-        [60, 48],
-        [65, 40]
+          [79, 83],
+          [87, 91],
+          [91, 77]
       ]
     },
     {
@@ -832,9 +832,9 @@
       "studentId": 200709072,
       "takenCourses": [3, 4, 6],
       "grades": [
-        [68, 30],
-        [63, 42],
-        [67, 35]
+          [88, 89],
+          [90, 87],
+          [85, 88]
       ]
     },
     {
@@ -843,9 +843,9 @@
       "studentId": 200709073,
       "takenCourses": [1, 5, 7],
       "grades": [
-        [72, 34],
-        [66, 40],
-        [70, 32]
+          [91, 77],
+          [85, 82],
+          [94, 81]
       ]
     },
     {
@@ -854,9 +854,9 @@
       "studentId": 200709074,
       "takenCourses": [0, 2, 4],
       "grades": [
-        [65, 38],
-        [62, 45],
-        [68, 30]
+          [82, 95],
+          [86, 89],
+          [90, 81]
       ]
     },
     {
@@ -865,8 +865,8 @@
       "studentId": 200709075,
       "takenCourses": [3, 5],
       "grades": [
-        [70, 45],
-        [68, 50]
+          [86, 91],
+          [87, 83]
       ]
     },
     {
@@ -875,9 +875,9 @@
       "studentId": 200709076,
       "takenCourses": [0, 1, 6],
       "grades": [
-        [68, 30],
-        [60, 55],
-        [65, 45]
+          [80, 88],
+          [85, 91],
+          [82, 89]
       ]
     },
     {
@@ -886,9 +886,9 @@
       "studentId": 200709077,
       "takenCourses": [2, 3, 7],
       "grades": [
-        [65, 30],
-        [55, 70],
-        [60, 40]
+          [79, 86],
+          [88, 92],
+          [90, 80]
       ]
     },
     {
@@ -897,9 +897,9 @@
       "studentId": 200709078,
       "takenCourses": [1, 2, 5],
       "grades": [
-        [70, 35],
-        [68, 55],
-        [72, 60]
+          [81, 77],
+          [85, 90],
+          [88, 95]
       ]
     },
     {
@@ -908,9 +908,9 @@
       "studentId": 200709079,
       "takenCourses": [3, 4, 6],
       "grades": [
-        [73, 48],
-        [68, 50],
-        [14, 90]
+          [92, 88],
+          [87, 85],
+          [98, 91]
       ]
     },
     {
@@ -919,10 +919,10 @@
       "studentId": 200709080,
       "takenCourses": [1, 3, 5, 7],
       "grades": [
-        [90, 35],
-        [68, 87],
-        [72, 78],
-        [67, 60]
+          [94, 79],
+          [90, 88],
+          [85, 91],
+          [89, 80]
       ]
     }
 ]

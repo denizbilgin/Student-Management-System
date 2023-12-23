@@ -5,6 +5,8 @@ export class StudentsDatabase{
     constructor(){
         this.students = [];
         this.setStudents(studentsJSON);
+        //var studentsLocal = this.students.map(student => JSON.stringify(student));
+        //localStorage.setItem("students", studentsLocal);
     }
 
     setStudents(students){

@@ -9,19 +9,19 @@ export class Student{
         this.takenCourses = takenCourses;
     }
 
-    getStudentDetails(isTenBased){
+    getStudentDetails(){
         var text = this.studentId + " numared " + this.name + " " + this.surname + 
-            "'s GPA is: " + this.getStudentGPA(isTenBased) + ".";
+            "'s GPA is: " + this.getStudentGPA() + ".";
         return text;
     }
 
-    getStudentGPA(isTenBased){
+    getStudentGPA(){
         const courses = new CoursesDatabase();
         var totalWeightedGrade = 0;
         var totalActs = 0;
         for (let i = 0; i < this.takenCourses.length; i++) {
             var course = courses.getCourseById(this.takenCourses[i]);
-            var grade = this.calculatePointByScale(course.courseId, isTenBased);
+            var grade = this.calculatePointByScale(course.courseId);
             switch (grade) {
                 case 'AA':
                     totalWeightedGrade += (4.0)*course.acts;
@@ -51,7 +51,7 @@ export class Student{
             totalActs += course.acts;
         }
         var GPA = totalWeightedGrade / totalActs;
-        return GPA;
+        return GPA.toFixed(2);
     }
 
     getGradesByCourse(courseId){
@@ -81,11 +81,13 @@ export class Student{
     }
 
     // kursa göre isTenBaset şuan değişiyor ona göre hesapla
-    calculatePointByScale(courseId, isTenBased){
+    calculatePointByScale(courseId){
+        const courses = new CoursesDatabase();
+        var course = courses.getCourseById(courseId);
         var result = this.getGradeAverageByCourse(courseId);
         var scales = ["AA", "BA", "BB", "CB", "CC", "CD", "DD"];
         var threshold = 100;
-        var number = isTenBased === true ? 10/2 : 7/2;
+        var number = course.isTenBased === true ? 10/2 : 7/2;
 
         threshold -= number;
         for (let i = 0; i < scales.length; i++) {
