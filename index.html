@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MSKU OBS</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./students-home.css">
     <link rel="stylesheet" href="./get-all-students.css">
+    <link rel="stylesheet" href="./courses-home.css">
+    <link rel="stylesheet" href="./get-all-courses.css">
     <script src="./app.js" defer type="module"></script>
 </head>
 <body>
@@ -60,7 +63,7 @@
                         Students Home
                     </div>
                     <div onclick="mainChanger('get-all-students')">
-                        Get All Students
+                        All Students
                     </div>
                 </div>
 
@@ -68,11 +71,11 @@
                     <b>Courses</b>
                 </div>
                 <div class="panel">
-                    <div>
+                    <div onclick="mainChanger('courses-home')">
                         Courses Home
                     </div>
-                    <div>
-                        Get All Courses
+                    <div onclick="mainChanger('get-all-courses')">
+                        All Courses
                     </div>
                 </div>
             </div>
@@ -93,16 +96,24 @@
                 <p class="about-paragraph">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, alias nulla? Porro quis qui libero sed dicta veritatis ipsum mollitia voluptatum sequi necessitatibus fugiat, ea natus consequuntur voluptates vel quam quia. Officia ipsam ducimus dignissimos aspernatur laborum provident voluptas maiores doloremque expedita dolorem nesciunt sunt ad sed sit est odit autem, id voluptatibus nobis fuga. Suscipit minima unde commodi modi voluptas accusamus possimus sint similique beatae numquam. Sint sit, dignissimos illo nihil labore totam rem, qui ab neque eaque provident.
                     <br><br>
-                    <i>There are <span id="students-length"></span> students in MSKU.</p></i>
+                    <b><i>There are <span id="students-length"></span> students in MSKU.</p></i></b>
                 <table id="students-table">
                     <tr>
                         <th>Student ID</th>
                         <th>Name</th>
                         <th>Surname</th>
                         <th>GPA</th>
+                        <th>Total ACTS</th>
                     </tr>
                 </table>
-                </div>
+            </div>
+            <div id="courses-home" class="category">
+                <h1>Courses Home</h1>
+                AAAAAAAAAAAA
+            </div>
+            <div id="get-all-courses" class="category">
+                <h1>All Courses</h1>
+                sdfsdf
             </div>
             
         </main>
@@ -137,3 +148,16 @@
 
 </body>
 </html>
+
+<!--
+YAPILACAKLAR:
+    - Yazdığın her backend fonksiyonunda bugları önleyecek ifler yaz (Eğer student id zaten varsa eklemesin)
+    - All students ve All courses kısmına search ekle, gelen search'e göre farklı tablo dönsün
+    - Students Home ve Courses Home'a öğrenci/kurs ekleme tarzı yazdığın fonksiyonları form şeklinde güzel inputlarla ekle (yazdığın accordion sınıfını kullan)
+    - Home kısmını düzenle güzel hale getir
+    - Tüm sayfaları güzel hale getir
+    - Profil için ekstra bir html sayfası aç ve orayı backendsiz güzelce doldur.
+    - Mobil için siteyi düzelt
+    - Login register yap (opsiyonel)
+    - Programını pdf'teki use caselerle test et
+-->

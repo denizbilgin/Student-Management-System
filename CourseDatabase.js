@@ -1,76 +1,127 @@
-import coursesJSON from "./database/courses.json" assert {type:'json'};
 import {Course} from "./Course.js";
-import { StudentsDatabase } from "./StudentDatabase.js";
 
 export class CoursesDatabase{
     constructor(){
         this.courses = [];
-        this.setCourses(coursesJSON);
     }
 
-    setCourses(courses){
-        for (let i = 0; i < courses.length; i++) {
+    setCoursesThenUploadToLocalStorage(coursesJSON){
+        for (let i = 0; i < coursesJSON.length; i++) {
             this.courses.push(new Course(
-                courses[i].courseId,
-                courses[i].name,
-                courses[i].instructor,
-                courses[i].description,
-                courses[i].midtermPercent,
-                courses[i].acts,
-                courses[i].isTenBased));
+                coursesJSON[i].courseId,
+                coursesJSON[i].name,
+                coursesJSON[i].instructor,
+                coursesJSON[i].description,
+                coursesJSON[i].midtermPercent,
+                coursesJSON[i].acts,
+                coursesJSON[i].isTenBased));
         }
+        localStorage.setItem("courses", JSON.stringify(this.courses));
+    }
+
+    getCoursesFromLocalStorage(){
+        var coursesLS = JSON.parse(localStorage.getItem("courses"));
+        var courses = [];
+        for (let i = 0; i < coursesLS.length; i++) {
+            var course = new Course(coursesLS[i].courseId,
+                coursesLS[i].name,
+                coursesLS[i].instructor,
+                coursesLS[i].description,
+                coursesLS[i].midtermPercent,
+                coursesLS[i].acts,
+                coursesLS[i].isTenBased);
+            courses.push(course);
+        }
+        return courses;
     }
 
     getCountOfAllCourses(){
-        return this.courses.length;
+        return this.getCoursesFromLocalStorage().length;
     }
 
     getCourseById(courseId){
-        for (let i = 0; i < this.courses.length; i++) {
-            if (this.courses[i].courseId === courseId) {
-                return this.courses[i];
+        var courses = this.getCoursesFromLocalStorage();
+        for (let i = 0; i < courses.length; i++) {
+            if (courses[i].courseId === courseId) {
+                return courses[i];
             }
         }
     }
 
     getCourseByName(name){
+        var courses = this.getCoursesFromLocalStorage();
         var result = [];
-        for (let i = 0; i < this.courses.length; i++) {
-            if (this.courses[i].name == name) {
-                result.push(this.courses[i]);
+        for (let i = 0; i < courses.length; i++) {
+            if (courses[i].name == name) {
+                result.push(courses[i]);
             }
         }
-
         return result;
     }
 
     getCoursesByInstructor(instructorName){
+        var courses = this.getCoursesFromLocalStorage();
         var result = [];
-        for (let i = 0; i < this.courses.length; i++) {
-            if (this.courses[i].instructor == instructorName) {
-                result.push(this.courses[i]);
+        for (let i = 0; i < courses.length; i++) {
+            if (courses[i].instructor == instructorName) {
+                result.push(courses[i]);
             }
         }
         return result;
     }
 
-    updateJSON(courses){
-        const jsonData = courses.map(course => JSON.stringify(course));
-        console.log(jsonData);
-        console.log("SONRA YAP");
-    }
-
     addCourse(course){
-        this.courses.push(course);
-        this.updateJSON(this.courses);
-        console.log("SONRA YAP");
+        var oldData = JSON.parse(localStorage.getItem("courses"));
+        oldData.push({
+            courseId:course.courseId,
+            name:course.name,
+            instructor:course.instructor,
+            acts:course.acts,
+            description:course.description,
+            midtermPercent:course.midtermPercent,
+            isTenBased:course.isTenBased
+        });
+        localStorage.setItem("courses", JSON.stringify(oldData));
+        console.log(`Course with name ${course.name} has been ADDED.`);
     }
 
-    updateCourse(course){
-        console.log("SONRA YAP");
+    updateCourse(courseId, newCourse){
+        var oldData = JSON.parse(localStorage.getItem("courses"));
+        var isFound = false;
+        for (let i = 0; i < oldData.length; i++) {
+            if (oldData[i].courseId === courseId) {
+                oldData[i].courseId = newCourse.courseId;
+                oldData[i].name = newCourse.name;
+                oldData[i].instructor = newCourse.instructor;
+                oldData[i].acts = newCourse.acts;
+                oldData[i].description = newCourse.description;
+                oldData[i].midtermPercent = newCourse.midtermPercent;
+                oldData[i].isTenBased = newCourse.isTenBased;
+
+                isFound = true;
+            }
+        }
+
+        if (!isFound) {
+            console.log(`Course with ID ${courseId} not found.`);
+        }
+        else {
+            localStorage.setItem("courses", JSON.stringify(oldData));
+            console.log(`Course with ID ${courseId} has been UPDATED.`);
+        }
+
     }
 
-    deleteCourse(studentId){
-        console.log("SONRA YAP");
+    deleteCourse(courseId){
+        var oldData = JSON.parse(localStorage.getItem("courses"));
+        const indexToDelete = oldData.findIndex(course => course.courseId === courseId);
+        if (indexToDelete !== -1) {
+            oldData.splice(indexToDelete, 1);
+            localStorage.setItem("courses", JSON.stringify(oldData));
+            console.log(`Course with ID ${courseId} has been DELETED.`);
+        }
+        else {
+            console.log(`Course with ID ${courseId} not found.`);
+        }
     }
 }

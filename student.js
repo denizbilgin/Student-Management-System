@@ -80,7 +80,6 @@ export class Student{
         return result;
     }
 
-    // kursa göre isTenBaset şuan değişiyor ona göre hesapla
     calculatePointByScale(courseId){
         const courses = new CoursesDatabase();
         var course = courses.getCourseById(courseId);
@@ -98,7 +97,5 @@ export class Student{
         }
         return "FF";
     }
-
-
 }
 

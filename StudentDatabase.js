@@ -1,68 +1,109 @@
-import studentsJSON from "./database/students.json" assert {type:'json'};
 import { Student } from "./student.js";
 
 export class StudentsDatabase{
     constructor(){
         this.students = [];
-        this.setStudents(studentsJSON);
-        //var studentsLocal = this.students.map(student => JSON.stringify(student));
-        //localStorage.setItem("students", studentsLocal);
     }
 
-    setStudents(students){
-        for (let i = 0; i < students.length; i++) {
+    setStudentsThenUploadToLocalStorage(studentsJSON){
+        for (let i = 0; i < studentsJSON.length; i++) {
             this.students.push(new Student(
-                students[i].name,
-                students[i].surname,
-                students[i].studentId,
-                students[i].grades,
-                students[i].takenCourses
+                studentsJSON[i].name,
+                studentsJSON[i].surname,
+                studentsJSON[i].studentId,
+                studentsJSON[i].grades,
+                studentsJSON[i].takenCourses
             ));
         }
+        localStorage.setItem("students", JSON.stringify(this.students));
+    }
+
+    getStudentsFromLocalStorage(){
+        var studentsLS = JSON.parse(localStorage.getItem("students"));
+        var students = [];
+        for (let i = 0; i < studentsLS.length; i++) {
+            var student = new Student(
+                studentsLS[i].name,
+                studentsLS[i].surname,
+                studentsLS[i].studentId,
+                studentsLS[i].grades,
+                studentsLS[i].takenCourses);
+            students.push(student);
+        }
+        return students;
     }
 
     getCountOfAllStudents(){
-        return this.students.length;
+        return this.getStudentsFromLocalStorage().length;
     }
 
     getStudentById(studentId){
-        for (let i = 0; i < this.students.length; i++) {
-            if(this.students[i].studentId === studentId){
-                return this.students[i];
+        var students = this.getStudentsFromLocalStorage();
+        for (let i = 0; i < students.length; i++) {
+            if(students[i].studentId === studentId){
+                return students[i];
             }
         }
     }
 
     getStudentsByName(name){
+        var students = this.getStudentsFromLocalStorage();
         var result = [];
-        for (let i = 0; i < this.students.length; i++) {
-            if (this.students[i].name == name) {
-                result.push(this.students[i]);
+        for (let i = 0; i < students.length; i++) {
+            if (students[i].name == name) {
+                result.push(students[i]);
             }
         }
-
         return result;
     }
 
-    updateJSON(students){
-        const jsonData = students.map(student => JSON.stringify(student));
-        console.log(jsonData);
-        console.log("SONRA YAP");
-    }
-
     addStudent(student){
-        this.students.push(student);
-        this.updateJSON(this.students);
-        console.log("SONRA YAP");
+        var oldData = JSON.parse(localStorage.getItem("students"));
+        oldData.push({
+            name:student.name,
+            surname:student.surname,
+            studentId:student.studentId,
+            grades:student.grades,
+            takenCourses:student.takenCourses
+        });
+        localStorage.setItem("students", JSON.stringify(oldData));
+        console.log(`Student with ID ${student.studentId} has been ADDED.`);
     }
 
-    updateStudent(student){
-        console.log("SONRA YAP");
+    updateStudent(studentId, newStudent){
+        var oldData = JSON.parse(localStorage.getItem("students"));
+        var isFound = false;
+        for (let i = 0; i < oldData.length; i++) {
+            if(oldData[i].studentId === studentId){
+                oldData[i].name = newStudent.name;
+                oldData[i].surname = newStudent.surname;
+                oldData[i].studentId = newStudent.studentId;
+                oldData[i].grades = newStudent.grades;
+                oldData[i].takenCourses = newStudent.takenCourses;
+
+                isFound = true;
+            }
+        }
+
+        if (!isFound) {
+            console.log(`Student with ID ${studentId} not found.`);
+        }
+        else {
+            localStorage.setItem("students", JSON.stringify(oldData));
+            console.log(`Student with ID ${studentId} has been UPDATED.`);
+        }
     }
 
     deleteStudent(studentId){
-        console.log("SONRA YAP");
+        var oldData = JSON.parse(localStorage.getItem("students"));
+        const indexToDelete = oldData.findIndex(student => student.studentId === studentId);
+        if (indexToDelete !== -1) {
+            oldData.splice(indexToDelete, 1);
+            localStorage.setItem("students", JSON.stringify(oldData));
+            console.log(`Student with ID ${studentId} has been DELETED.`);
+        }
+        else {
+            console.log(`Student with ID ${studentId} not found.`);
+        }
     }
-
-
 }

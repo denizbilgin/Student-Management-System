@@ -20,7 +20,7 @@ export class Course{
 
     getStudents(){
         var result = [];
-        var students = new StudentsDatabase().students;
+        var students = new StudentsDatabase().getStudentsFromLocalStorage();
         for (let i = 0; i < students.length; i++) {
             for (let j = 0; j < students[i].takenCourses.length; j++) {
                 if (students[i].takenCourses[j] == this.courseId) {
@@ -32,13 +32,13 @@ export class Course{
     }
 
     getNumberOfStudents(){
-        return this.getStudents(this.courseId).length;
+        return this.getStudents().length;
     }
 
     getAverageScore(){
         var total = 0;
         var numberOfStudents = 0;
-        var students = this.getStudents(this.courseId);
+        var students = this.getStudents();
         for (let i = 0; i < students.length; i++) {
             var gradeAverageOfStudent = students[i].getGradeAverageByCourse(this.courseId);
             total += gradeAverageOfStudent;
