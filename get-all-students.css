@@ -7,24 +7,13 @@
     margin: 1rem 0;
 }
 
-#students-table{
-    border-collapse: collapse;
-    width: 80%;
-    margin: auto;
-    margin-bottom: 2rem;
+#my-student-search-button{
+    background-color: green;
+    margin-left: 0.5rem;
 }
 
-#students-table th {
-    background-color: darkslateblue;
-    color: white;
+#my-student-clear-button{
+    background-color: red;
+    margin-left: 0.5rem;
 }
 
-#students-table td, th {
-    border: 1px solid #c7c7c7;
-    text-align: left;
-    padding: 8px;
-}
-
-#students-table tr:nth-child(even) {
-    background-color: #dddddd;
-}

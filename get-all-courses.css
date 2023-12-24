@@ -1,3 +1,18 @@
 #get-all-courses h1{
     color: darkslateblue;
 }
+
+#get-all-courses .about-paragraph{
+    text-align: left;
+    margin: 1rem 0;
+}
+
+#my-course-search-button{
+    background-color: green;
+    margin-left: 0.5rem;
+}
+
+#my-course-clear-button{
+    background-color: red;
+    margin-left: 0.5rem;
+}

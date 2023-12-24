@@ -25,6 +25,8 @@
                 }
             })
         }
+
+
     </script>
 
     <!-- NAVBAR -->
@@ -96,15 +98,14 @@
                 <p class="about-paragraph">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, alias nulla? Porro quis qui libero sed dicta veritatis ipsum mollitia voluptatum sequi necessitatibus fugiat, ea natus consequuntur voluptates vel quam quia. Officia ipsam ducimus dignissimos aspernatur laborum provident voluptas maiores doloremque expedita dolorem nesciunt sunt ad sed sit est odit autem, id voluptatibus nobis fuga. Suscipit minima unde commodi modi voluptas accusamus possimus sint similique beatae numquam. Sint sit, dignissimos illo nihil labore totam rem, qui ab neque eaque provident.
                     <br><br>
-                    <b><i>There are <span id="students-length"></span> students in MSKU.</p></i></b>
-                <table id="students-table">
-                    <tr>
-                        <th>Student ID</th>
-                        <th>Name</th>
-                        <th>Surname</th>
-                        <th>GPA</th>
-                        <th>Total ACTS</th>
-                    </tr>
+                    <b><i>There are <span id="students-length"></span> students in MSKU.</i></b>
+                </p>
+                <div class="my-search-part">
+                    <input id="student-search-input" type="text" class="my-search-bar" placeholder="Search by student name..">
+                    <button type="submit" id="my-student-search-button" class="my-button">Search</button>
+                    <button type="submit" id="my-student-clear-button" class="my-button">Clear</button>
+                </div>
+                <table id="students-table" class="my-table">
                 </table>
             </div>
             <div id="courses-home" class="category">
@@ -113,7 +114,18 @@
             </div>
             <div id="get-all-courses" class="category">
                 <h1>All Courses</h1>
-                sdfsdf
+                <p class="about-paragraph">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, alias nulla? Porro quis qui libero sed dicta veritatis ipsum mollitia voluptatum sequi necessitatibus fugiat, ea natus consequuntur voluptates vel quam quia. Officia ipsam ducimus dignissimos aspernatur laborum provident voluptas maiores doloremque expedita dolorem nesciunt sunt ad sed sit est odit autem, id voluptatibus nobis fuga. Suscipit minima unde commodi modi voluptas accusamus possimus sint similique beatae numquam. Sint sit, dignissimos illo nihil labore totam rem, qui ab neque eaque provident.
+                    <br><br>
+                    <b><i>There are <span id="courses-length"></span> courses in MSKU.</i></b>
+                </p>
+                <div class="my-search-part">
+                    <input id="course-search-input" type="text" class="my-search-bar" placeholder="Search by course name..">
+                    <button type="submit" id="my-course-search-button" class="my-button">Search</button>
+                    <button type="submit" id="my-course-clear-button" class="my-button">Clear</button>
+                </div>
+                <table id="courses-table" class="my-table">
+                </table>
             </div>
             
         </main>

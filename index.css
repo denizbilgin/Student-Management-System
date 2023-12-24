@@ -60,6 +60,30 @@ a{
     content: "\2796";
 }
 
+.my-search-part{
+    margin-bottom: 1rem;
+}
+
+.my-search-bar{
+    height: 3rem;
+    width: 70%;
+    border-radius: 10px;
+    border: 1px solid #777777;
+    text-align: left;
+    padding-left: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.my-button{
+    color: white;
+    padding: 1rem 1.6rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+}
+
 /* NAVBAR */
 nav{
     position: fixed;
@@ -135,6 +159,28 @@ main{
 
 .category-active{
     display: block;
+}
+
+.my-table{
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.my-table th {
+    background-color: darkslateblue;
+    color: white;
+}
+
+.my-table td, th {
+    border: 1px solid #c7c7c7;
+    text-align: left;
+    padding: 8px;
+}
+
+.my-table tr:nth-child(even) {
+    background-color: #dddddd;
 }
 
 /* FOOTER */
