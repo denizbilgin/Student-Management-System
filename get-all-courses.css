@@ -1,5 +1,6 @@
 #get-all-courses h1{
     color: darkslateblue;
+    margin-top: 2rem;
 }
 
 #get-all-courses .about-paragraph{
@@ -8,11 +9,43 @@
 }
 
 #my-course-search-button{
-    background-color: green;
+    background-color: rgb(93, 161, 93);
     margin-left: 0.5rem;
 }
 
+#my-course-search-button:hover{
+    background-color: rgb(81, 122, 81);
+}
+
 #my-course-clear-button{
-    background-color: red;
+    background-color: #cc4848;
     margin-left: 0.5rem;
+}
+
+#my-course-clear-button:hover{
+    background-color: #9e3b3b;
+}
+
+
+.get-all-courses-info{
+    display: flex;
+    margin: 2rem 0;
+}
+
+.get-all-courses-info img{
+    width: 26vw;
+    border-radius: 20px;
+    margin-right: 1.5rem;
+}
+
+.sample-course-video-part{
+    display: flex;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.sample-course-video-part video{
+    width: 35vw;
+    border-radius: 20px;
+    margin-left: 1.5rem;
 }

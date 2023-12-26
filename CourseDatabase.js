@@ -85,12 +85,11 @@ export class CoursesDatabase{
         console.log(`Course with name ${course.name} has been ADDED.`);
     }
 
-    updateCourse(courseId, newCourse){
+    updateCourse(newCourse){
         var oldData = JSON.parse(localStorage.getItem("courses"));
         var isFound = false;
         for (let i = 0; i < oldData.length; i++) {
-            if (oldData[i].courseId === courseId) {
-                oldData[i].courseId = newCourse.courseId;
+            if (oldData[i].courseId === newCourse.courseId) {
                 oldData[i].name = newCourse.name;
                 oldData[i].instructor = newCourse.instructor;
                 oldData[i].acts = newCourse.acts;
@@ -103,11 +102,11 @@ export class CoursesDatabase{
         }
 
         if (!isFound) {
-            console.log(`Course with ID ${courseId} not found.`);
+            console.log(`Course with ID ${newCourse.courseId} not found.`);
         }
         else {
             localStorage.setItem("courses", JSON.stringify(oldData));
-            console.log(`Course with ID ${courseId} has been UPDATED.`);
+            console.log(`Course with ID ${newCourse.courseId} has been UPDATED.`);
         }
 
     }
