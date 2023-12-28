@@ -44,21 +44,12 @@ function setCoursesTable(courses, coursesTable, tableHeader = "<tr>" + "<th>Cour
     }
 }
 
-function capitalizeWords(input){
-    let words = input.split(' ');
-    for (let i = 0; i < words.length; i++) {
-        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
-    }
-    return words.join(' ');
-}
-
 function searchByCourseName(coursesDb, coursesTable , tableHeader = "<tr>" + "<th>Course ID</th>" + "<th>Course Name</th>" + "<th>Instructor</th>" + "<th>ACTS</th>" + "<th>Midterm & Final Percenty</th>" + "<th>Number of Learners</th>" + "</tr>"){
     coursesTable.innerHTML = "";
     coursesTable.innerHTML += tableHeader;
     var userInput = document.getElementById("course-search-input").value;
     
     if (userInput) {
-        userInput = capitalizeWords(userInput);
         var result = coursesDb.getCourseByName(userInput);
         if (result.length === 0) {
             setCoursesTable(coursesDb.getCoursesFromLocalStorage(), coursesTable);

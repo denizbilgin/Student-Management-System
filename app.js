@@ -30,7 +30,7 @@ for (let i = 0; i < accordion.length; i++) {
     })
 }
 
-studentsHomeMain(studentsDB);
+studentsHomeMain(studentsDB, coursesDB);
 getAllStudentsMain(studentsDB);
 coursesHomeMain(coursesDB);
 getAllCoursesMain(coursesDB);

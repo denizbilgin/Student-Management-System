@@ -94,10 +94,69 @@
                         0512 512 12 12
                     </div>
                 </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut possimus, necessitatibus nisi assumenda fugiat non odit, blanditiis ab incidunt accusamus atque animi quaerat aut iure harum quis obcaecati distinctio officiis mollitia maxime iusto modi id illum recusandae! Porro consequuntur quasi quia est harum, doloribus at amet voluptate atque optio debitis eligendi eius. Aspernatur voluptas est hic in deserunt, tempore porro nobis dolorum aut excepturi assumenda. Quaerat asperiores id consequatur, sed ipsum ut aliquam veritatis ullam sunt illum nihil alias quos officiis omnis consectetur magnam vero necessitatibus molestias aperiam earum quasi animi suscipit sit? Laboriosam repudiandae impedit aspernatur fugiat natus incidunt facere ut earum amet hic sapiente cum perspiciatis, nostrum aut excepturi temporibus officiis ducimus fugit aliquam molestias at deleniti dolorem eveniet. Fugiat totam, eaque suscipit, earum laboriosam consequatur voluptate esse quae tempore nesciunt laudantium delectus quibusdam quos accusantium vitae amet animi sed eligendi. Aliquam non eveniet, commodi velit pariatur ad rem sapiente deserunt maxime impedit fugiat et architecto corporis iure quod dicta obcaecati. Nisi quis beatae tenetur quia iste nesciunt enim voluptatum velit necessitatibus consequatur, ab id. Blanditiis, accusantium soluta? Fugiat, laboriosam eos in excepturi sunt sequi doloribus nobis, corporis iste voluptatum nesciunt, autem debitis recusandae mollitia asperiores eveniet maiores!
+                </p>
+                <img id="msku-photo" src="./imgs/msku.jpeg" alt="MSKU">
             </div>
             <div id="students-home" class="category">
                 <h1>Students Home</h1>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis unde quis fugit consectetur optio adipisci cumque amet et recusandae ipsam fuga eius, nam vel soluta earum ad hic harum culpa?
+                <div style="background-color: #faeee2; width: 70%; padding: 2rem; border-radius: 2rem; margin: 2rem 0;">
+                    <img id="student-home-img" src="./imgs/doing-homework-together.jpg" alt="Team Working">
+                    <p style="text-align: left;">
+                        We have many students at MSKU. Since you have admin authorization, you can easily 
+                        perform operations on these students with the MSKU OBS application. This application 
+                        has been developed with your comfort in mind.
+                    </p>
+                    <div class="warning warning-red">
+                        Be careful about deleting. This process will <b style="margin: 0 4px;">not</b> be able to <i style="margin-left: 4px;">recoverable</i>.
+                    </div>
+                </div>
+                <div class="inputs-part">
+                    <div class="student-adding-part">
+                        <h3>Add Student</h3>
+                        <div style="text-align: left; margin-bottom: 10px;">Please fill the inputs carefully. <br> Once you add a student with id, you <b>will not change</b> it anymore. <br>Enter the taken courses separated by commas. Example 1,5,8..</div>
+                        <form id="student-adding-form">
+                            <input type="text" id="add-studentName" class="my-input" placeholder="Student Name" required>
+                            <input type="text" id="add-studentSurname" class="my-input" placeholder="Student Surname" required>
+                            <input type="number" id="add-studentId" class="my-input" placeholder="Student ID" required>
+                            <div id="adding-takenCourses">
+                                <b style="text-align: left; margin-bottom: 0.5rem;">Taken Courses:</b>
+                            </div>
+                            <button type="button" class="my-button" id="add-takenCourse-button">Add New Course</button>
+                            <button type="submit" id="student-add-button" class="my-button">Add</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="inputs-part">
+                    <div class="student-updating-part">
+                        <h3>Update Student</h3>
+                        <div style="text-align: left; margin-bottom: 10px;">Please fill the inputs carefully. <br> You <b>can not update</b> student ID of any student.</div>
+                        <form id="student-updating-form">
+                            <input type="number" id="update-studentId" class="my-input" placeholder="Student ID" required>
+                            <input type="text" id="update-studentName" class="my-input" placeholder="Student Name" required>
+                            <input type="text" id="update-studentSurname" class="my-input" placeholder="Student Surname" required>
+                            <div id="updating-takenCourses">
+                                <b style="text-align: left; margin-bottom: 0.5rem;">Taken Courses:</b>
+                            </div>
+                            <button type="button" class="my-button" id="update-takenCourse-button">Add New Course</button>
+                            <button type="submit" id="student-update-button" class="my-button">Update</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="inputs-part">
+                    <div class="student-deleting-part">
+                        <h3>Delete Student</h3>
+                        <div style="text-align: left; margin-bottom: 10px;">Once you delete any student, you can not reload it again. <b><i>BE CAREFUL!</i></b></div>
+                        <form id="student-deleting-form">
+                            <div style="text-align: left; margin-bottom: 0.7rem;">
+                                <label for="delete-studentId">Student ID to delete.</label> <br>
+                                <input type="number" id="delete-studentId" class="my-input" min="0" placeholder="student ID" required style="margin-top: 0.5rem;">
+                            </div>
+                            <button type="submit" id="student-delete-button" class="my-button">Delete</button>
+                        </form>
+                    </div>
+                </div>
             </div>
             <div id="get-all-students" class="category">
                 <h1>All Students</h1>
@@ -111,23 +170,28 @@
                     </p>
                     <img src="./imgs/students.jpg" alt="Students Image">
                 </div>
-                <div class="my-search-part">
-                    <input id="student-search-input" type="text" class="my-search-bar" placeholder="Search by student name..">
-                    <button type="submit" id="my-student-search-button" class="my-button">Search</button>
-                    <button type="submit" id="my-student-clear-button" class="my-button">Clear</button>
+                <div style="background-color: #faeee2; padding: 2rem; border-radius: 2rem; margin-bottom: 2rem;">
+                    <div class="my-search-part">
+                        <input id="student-search-input" type="text" class="my-search-bar" placeholder="Search by student name..">
+                        <button type="submit" id="my-student-search-button" class="my-button">Search</button>
+                        <button type="submit" id="my-student-clear-button" class="my-button">Clear</button>
+                    </div>
+                    <table id="students-table" class="my-table">
+                    </table>
                 </div>
-                <table id="students-table" class="my-table">
-                </table>
             </div>
             <div id="courses-home" class="category">
                 <h1>Courses Home</h1>
-                <p style="text-align: left;">
-                    There are a lot of courses in MSKU. In this page of the student management systems
-                    application you can handle a lot of proccesses about courses. <br>
-                    For example, you can add student, update student or delete student from the database of ours.
-                </p>
-                <div class="warning warning-red">
-                    Be careful about deleting. This process will <b style="margin: 0 4px;">not</b> be able to <i style="margin-left: 4px;">recoverable</i>.
+                <div style="background-color: #faeee2; width: 70%; padding: 2rem; border-radius: 2rem; margin: 2rem 0;">
+                    <img id="courses-home-img" src="./imgs/lesson.jpg" alt="Lesson">
+                    <p style="text-align: left;">
+                        There are a lot of courses in MSKU. In this page of the student management systems
+                        application you can handle a lot of proccesses about courses. <br>
+                        For example, you can add course, update course or delete course from the database of ours.
+                    </p>
+                    <div class="warning warning-red">
+                        Be careful about deleting. This process will <b style="margin: 0 4px;">not</b> be able to <i style="margin-left: 4px;">recoverable</i>.
+                </div>
                 </div>
                 <div class="inputs-part">
                     <div class="course-adding-part">
@@ -198,13 +262,15 @@
                         <b><i>There are <span id="courses-length"></span> courses in MSKU.</i></b>
                     </p>
                 </div>
-                <div class="my-search-part">
-                    <input id="course-search-input" type="text" class="my-search-bar" placeholder="Search by course name..">
-                    <button type="submit" id="my-course-search-button" class="my-button">Search</button>
-                    <button type="submit" id="my-course-clear-button" class="my-button">Clear</button>
+                <div style="background-color: #faeee2; padding: 2rem; border-radius: 2rem; margin-bottom: 2rem;">
+                    <div class="my-search-part">
+                        <input id="course-search-input" type="text" class="my-search-bar" placeholder="Search by course name..">
+                        <button type="submit" id="my-course-search-button" class="my-button">Search</button>
+                        <button type="submit" id="my-course-clear-button" class="my-button">Clear</button>
+                    </div>
+                    <table id="courses-table" class="my-table">
+                    </table>
                 </div>
-                <table id="courses-table" class="my-table">
-                </table>
             </div>
             
         </main>
@@ -244,11 +310,10 @@
 YAPILACAKLAR:
     - Yazdığın her backend fonksiyonunda bugları önleyecek ifler yaz (Eğer student id zaten varsa eklemesin)
 *   - All students ve All courses kısmına search ekle, gelen search'e göre farklı tablo dönsün
-    - Students Home ve Courses Home'a öğrenci/kurs ekleme tarzı yazdığın fonksiyonları form şeklinde güzel inputlarla ekle (yazdığın accordion sınıfını kullan)
-    - Home kısmını düzenle güzel hale getir
-    - Tüm sayfaları güzel hale getir
-    - Profil için ekstra bir html sayfası aç ve orayı backendsiz güzelce doldur.
+*   - Students Home ve Courses Home'a öğrenci/kurs ekleme tarzı yazdığın fonksiyonları form şeklinde güzel inputlarla ekle (yazdığın accordion sınıfını kullan)
+*   - Home kısmını düzenle güzel hale getir
+*   - Tüm sayfaları güzel hale getir
     - Mobil için siteyi düzelt
-    - Login register yap (opsiyonel)
     - Programını pdf'teki use caselerle test et
+    - Kodları düzenle, Yorum satırları ekle
 -->

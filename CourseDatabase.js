@@ -50,6 +50,8 @@ export class CoursesDatabase{
 
     getCourseByName(name){
         var courses = this.getCoursesFromLocalStorage();
+        console.log(courses);
+        console.log(name);
         var result = [];
         for (let i = 0; i < courses.length; i++) {
             if (courses[i].name == name) {

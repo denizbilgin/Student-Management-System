@@ -70,14 +70,13 @@ export class StudentsDatabase{
         console.log(`Student with ID ${student.studentId} has been ADDED.`);
     }
 
-    updateStudent(studentId, newStudent){
+    updateStudent(newStudent){
         var oldData = JSON.parse(localStorage.getItem("students"));
         var isFound = false;
         for (let i = 0; i < oldData.length; i++) {
-            if(oldData[i].studentId === studentId){
+            if(oldData[i].studentId === newStudent.studentId){
                 oldData[i].name = newStudent.name;
                 oldData[i].surname = newStudent.surname;
-                oldData[i].studentId = newStudent.studentId;
                 oldData[i].grades = newStudent.grades;
                 oldData[i].takenCourses = newStudent.takenCourses;
 
@@ -86,11 +85,11 @@ export class StudentsDatabase{
         }
 
         if (!isFound) {
-            console.log(`Student with ID ${studentId} not found.`);
+            console.log(`Student with ID ${newStudent.studentId} not found.`);
         }
         else {
             localStorage.setItem("students", JSON.stringify(oldData));
-            console.log(`Student with ID ${studentId} has been UPDATED.`);
+            console.log(`Student with ID ${newStudent.studentId} has been UPDATED.`);
         }
     }
 

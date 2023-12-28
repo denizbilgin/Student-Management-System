@@ -1,3 +1,73 @@
+#students-home{
+    text-align: left;
+}
+
 #students-home h1{
-    color: darkslateblue;
+    color: #66999B;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+#students-home p{
+    margin: 2rem 0;
+    width: 70%;
+}
+
+#students-home .inputs-part h3{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+#student-home-img{
+    width: 100%;
+    border-radius: 2rem;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.student-adding-part .my-button, .student-updating-part .my-button{
+    background-color: #B3AF8F;
+    margin-top: 1rem;
+}
+
+.student-adding-part, .student-updating-part, .student-deleting-part{
+    text-align: left;
+    width: 70%;
+    margin-bottom: 2rem;
+    background-color: #faeee2;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+#add-takenCourse-button, #update-takenCourse-button{
+    background-color: #66999B;
+    display: block;
+}
+
+#student-adding-form, #student-updating-form, #student-deleting-form{
+    text-align: left;
+}
+
+#student-add-button, #student-update-button, #student-delete-button{
+    width: 100%;
+}
+
+#adding-takenCourses, #updating-takenCourses{
+    margin-top: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#adding-takenCourses select, #updating-takenCourses select{
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+.student-deleting-part .my-button{
+    background-color: #b85c5c;
+}
+
+.student-deleting-part .my-button:hover{
+background-color: #b44d4d;
 }

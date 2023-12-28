@@ -30,29 +30,29 @@ a{
 
 /* USEFUL CLASSES */
 .bg-purple{
-    background-color: darkslateblue;
+    background-color: #66999B;
 }
 
 .purple{
-    color: darkslateblue;
+    color: #66999B;
 }
 
 .my-link:hover{
 
-    border-bottom: 2px solid gold;
-    color: gold;
+    border-bottom: 2px solid #B3AF8F;
+    color: #B3AF8F;
 }
 
 .accordion{
     cursor: pointer;
-    background-color: #eeeeee;
+    background-color: #faeee2;
     color: #444444;
     padding: 1rem 0;
     transition: 0.4s;
 }
 
 .active, .accordion:hover{
-    background-color: #cccccc;
+    background-color: #d6ccc1;
 }
 
 .panel{
@@ -79,7 +79,7 @@ a{
 
 .my-search-bar{
     height: 3rem;
-    width: 70%;
+    width: 80%;
     border-radius: 10px;
     border: 1px solid #777777;
     text-align: left;
@@ -100,13 +100,12 @@ a{
 
 .my-table{
     border-collapse: collapse;
-    width: 90%;
+    width: 100%;
     margin: auto;
-    margin-bottom: 2rem;
 }
 
 .my-table th {
-    background-color: darkslateblue;
+    background-color: #66999B;
     color: white;
 }
 
@@ -180,7 +179,7 @@ aside .panel div{
 }
 
 aside .panel div:hover{
-    background-color: #eeeeee;
+    background-color: #faeee2;
 }
 
 .my-input{
@@ -207,7 +206,8 @@ main{
 }
 
 #home h1{
-    color: darkslateblue;
+    color: #66999B;
+    margin-top: 2rem;
 }
 
 #home .user-part{
@@ -231,6 +231,12 @@ main{
     margin-bottom: 1rem;
 }
 
+#msku-photo{
+    width: 100%;
+    margin: 2rem 0;
+    border-radius: 1rem;
+}
+
 .warning{
     border-radius: 10px;
     width: fit-content;
@@ -242,8 +248,8 @@ main{
 }
 
 .warning-red{
-    border: 2px solid red;
-    background-color: rgba(255, 0, 0, 0.171);
+    border: 2px solid #b44d4d;
+    background-color: #c46767;
 }
 
 /* FOOTER */
@@ -286,7 +292,7 @@ footer .app-title{
     display: block;
     margin-top: 0.5rem;
     width: fit-content;
-    border: 2px solid darkslateblue;
+    border: 2px solid #66999B;
 }
 
 .copy-right{

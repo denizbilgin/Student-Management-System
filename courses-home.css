@@ -3,25 +3,35 @@
 }
 
 #courses-home h1{
-    color: darkslateblue;
+    color: #66999B;
     margin-top: 2rem;
     text-align: left;
 }
 
 #courses-home p{
     margin: 2rem 0;
+    width: 70%;
 }
 
-.inputs-part h3{
+#courses-home-img{
+    width: 100%;
+    border-radius: 2rem;
+    height: 30vh;
+    object-fit: cover;
+}
+
+#courses-home .inputs-part h3{
     text-align: left;
     margin-bottom: 1rem;
-    margin-top: 5rem;
 }
 
 .course-adding-part, .course-updating-part, .course-deleting-part{
     text-align: left;
     width: 70%;
     margin-bottom: 2rem;
+    background-color: #faeee2;
+    padding: 2rem;
+    border-radius: 2rem;
 }
 
 textarea{
@@ -47,21 +57,21 @@ textarea:user-invalid{
 }
 
 #course-add-button, #course-update-button{
-    background-color: rgb(93, 161, 93);
+    background-color: #B3AF8F;
     width: 100%;
     margin-top: 1rem;
 }
 
 #course-add-button:hover, #course-update-button:hover{
-    background-color: rgb(81, 122, 81);
+    background-color: #979479;
 }
 
 #course-delete-button{
-    background-color: #cc4848;
+    background-color: #b85c5c;
     width: 100%;
     margin-top: 1rem;
 }
 
 #course-delete-button:hover{
-    background-color: #9e3b3b;
+    background-color: #b44d4d;
 }

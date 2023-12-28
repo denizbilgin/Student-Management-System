@@ -86,7 +86,7 @@ export class Student{
         var result = this.getGradeAverageByCourse(courseId);
         var scales = ["AA", "BA", "BB", "CB", "CC", "CD", "DD"];
         var threshold = 100;
-        var number = course.isTenBased === true ? 10/2 : 7/2;
+        var number = course.isTenBased === true ? 10 : 7;
 
         threshold -= number;
         for (let i = 0; i < scales.length; i++) {

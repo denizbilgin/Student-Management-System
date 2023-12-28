@@ -1,5 +1,5 @@
 #get-all-students h1{
-    color: darkslateblue;
+    color: #66999B;
     margin-top: 2rem;
 }
 
@@ -9,26 +9,29 @@
 }
 
 #my-student-search-button{
-    background-color: rgb(93, 161, 93);
+    background-color: #B3AF8F;
     margin-left: 0.5rem;
 }
 
 #my-student-search-button:hover{
-    background-color: rgb(81, 122, 81);
+    background-color: #979479;
 }
 
 #my-student-clear-button{
-    background-color: #cc4848;
+    background-color: #b85c5c;
     margin-left: 0.5rem;
 }
 
 #my-student-clear-button:hover{
-    background-color: #9e3b3b;
+    background-color: #b44d4d;
 }
 
 .get-all-students-info{
     display: flex;
     margin: 2rem 0;
+    background-color: #faeee2;
+    padding: 2rem;
+    border-radius: 2rem;
 }
 
 .get-all-students-info img{
