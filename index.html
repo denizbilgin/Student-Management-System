@@ -15,6 +15,9 @@
     <script defer>
         // Main content changer
         function mainChanger(contentId) {
+            /*
+                This functiong changes the main content by given contentId that comes from clicking a category.
+            */
             const contents = document.querySelectorAll(".category");
             contents.forEach(content => {
                 if(content.id === contentId){

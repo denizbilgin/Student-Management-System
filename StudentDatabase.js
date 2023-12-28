@@ -6,6 +6,9 @@ export class StudentsDatabase{
     }
 
     setStudentsThenUploadToLocalStorage(studentsJSON){
+        /*
+            This function sets students array and then uploads the array to local storage
+        */
         for (let i = 0; i < studentsJSON.length; i++) {
             this.students.push(new Student(
                 studentsJSON[i].name,
@@ -19,6 +22,9 @@ export class StudentsDatabase{
     }
 
     getStudentsFromLocalStorage(){
+        /*
+            This function returns current state of the students from the local storage as student object array
+        */
         var studentsLS = JSON.parse(localStorage.getItem("students"));
         var students = [];
         for (let i = 0; i < studentsLS.length; i++) {
@@ -34,10 +40,16 @@ export class StudentsDatabase{
     }
 
     getCountOfAllStudents(){
+        /*
+            This function return number of existing students from the local storage
+        */
         return this.getStudentsFromLocalStorage().length;
     }
 
     getStudentById(studentId){
+        /*
+            This function returns a student object that comes from given student ID from the local storage
+        */
         var students = this.getStudentsFromLocalStorage();
         for (let i = 0; i < students.length; i++) {
             if(students[i].studentId === studentId){
@@ -47,6 +59,9 @@ export class StudentsDatabase{
     }
 
     getStudentsByName(name){
+        /*
+            This function returns students by student name from the local storage (can return multiple students)
+        */
         var students = this.getStudentsFromLocalStorage();
         var result = [];
         for (let i = 0; i < students.length; i++) {
@@ -58,6 +73,9 @@ export class StudentsDatabase{
     }
 
     addStudent(student){
+        /*
+            This function adds new student to the local storage
+        */
         var oldData = JSON.parse(localStorage.getItem("students"));
         oldData.push({
             name:student.name,
@@ -71,6 +89,9 @@ export class StudentsDatabase{
     }
 
     updateStudent(newStudent){
+        /*
+            This function updates the student that in the local storage. Student ID can not be updated
+        */
         var oldData = JSON.parse(localStorage.getItem("students"));
         var isFound = false;
         for (let i = 0; i < oldData.length; i++) {
@@ -94,6 +115,9 @@ export class StudentsDatabase{
     }
 
     deleteStudent(studentId){
+        /*
+            This function deletes the student that's student ID is given
+        */
         var oldData = JSON.parse(localStorage.getItem("students"));
         const indexToDelete = oldData.findIndex(student => student.studentId === studentId);
         if (indexToDelete !== -1) {

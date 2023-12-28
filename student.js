@@ -10,12 +10,53 @@ export class Student{
     }
 
     getStudentDetails(){
+        /* 
+            This function prints details of student to the console
+        */
         var text = this.studentId + " numared " + this.name + " " + this.surname + 
             "'s GPA is: " + this.getStudentGPA() + ".";
         return text;
     }
 
+    getGradeAverageByCourse(courseId){
+        /*
+            This function returns average point of the student on given course ID
+        */
+        const courses = new CoursesDatabase();
+        var course = courses.getCourseById(courseId);
+        var grades = this.getGradesByCourse(courseId);
+        var result = grades[0]*course.midtermPercent/100 + grades[1]*course.finalPercent/100;
+        return result;
+    }
+
+    getGradesByCourse(courseId){
+        /*
+            This function returns grades of the student by given course
+        */
+        for (let i = 0; i < this.takenCourses.length; i++) {
+            if(this.takenCourses[i] === courseId){
+                return this.grades[i];
+            }
+        }
+    }
+
+    getTotalActs(){
+        /*
+            This function returns total ACTS of the student
+        */
+        var total = 0;
+        const courses = new CoursesDatabase();
+        for (let i = 0; i < this.takenCourses.length; i++) {
+            var course = courses.getCourseById(this.takenCourses[i]);
+            total += course.acts;
+        }
+        return total;
+    }
+
     getStudentGPA(){
+        /*
+            This function returns GPA of the student by his/her grades and point scales of courses
+        */
         const courses = new CoursesDatabase();
         var totalWeightedGrade = 0;
         var totalActs = 0;
@@ -54,33 +95,10 @@ export class Student{
         return GPA.toFixed(2);
     }
 
-    getGradesByCourse(courseId){
-        for (let i = 0; i < this.takenCourses.length; i++) {
-            if(this.takenCourses[i] === courseId){
-                return this.grades[i];
-            }
-        }
-    }
-
-    getTotalActs(){
-        var total = 0;
-        const courses = new CoursesDatabase();
-        for (let i = 0; i < this.takenCourses.length; i++) {
-            var course = courses.getCourseById(this.takenCourses[i]);
-            total += course.acts;
-        }
-        return total;
-    }
-
-    getGradeAverageByCourse(courseId){
-        const courses = new CoursesDatabase();
-        var course = courses.getCourseById(courseId);
-        var grades = this.getGradesByCourse(courseId);
-        var result = grades[0]*course.midtermPercent/100 + grades[1]*course.finalPercent/100;
-        return result;
-    }
-
     calculatePointByScale(courseId){
+        /*
+            This function returns point scale of the student by given Course ID
+        */
         const courses = new CoursesDatabase();
         var course = courses.getCourseById(courseId);
         var result = this.getGradeAverageByCourse(courseId);

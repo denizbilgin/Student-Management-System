@@ -13,12 +13,18 @@ export class Course{
     }
 
     getCourseDetails(){
+        /* 
+            This function prints details of course to the console
+        */
         var text = this.name + " named course is given by " + this.instructor + ". And percenty of midterm exam is " + this.midtermPercent +
                         ", percenty of final exam is " + this.finalPercent + ". Finally description of the course is: \n" + this.description + ".";
         return text;
     }
 
     getStudents(){
+        /*
+            This function returns learners of this course
+        */
         var result = [];
         var students = new StudentsDatabase().getStudentsFromLocalStorage();
         for (let i = 0; i < students.length; i++) {
@@ -32,17 +38,22 @@ export class Course{
     }
 
     getNumberOfStudents(){
+        /*
+            This function returns number of learning of this course
+        */
         return this.getStudents().length;
     }
 
     getAverageScore(){
+        /*
+            This function return average score of learners that takes this course
+        */
         var total = 0;
-        var numberOfStudents = 0;
+        var numberOfStudents = this.getNumberOfStudents();
         var students = this.getStudents();
         for (let i = 0; i < students.length; i++) {
             var gradeAverageOfStudent = students[i].getGradeAverageByCourse(this.courseId);
             total += gradeAverageOfStudent;
-            numberOfStudents++;
         }
         return total/numberOfStudents;
     }

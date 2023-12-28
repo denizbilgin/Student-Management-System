@@ -1,5 +1,10 @@
 export function studentsHomeMain(studentsDb, coursesDb) {
+    /*
+        This function is the main function of students-home page. Also this function includes the students-home page's javascript codes
+    */
 
+
+    // This code part handles student adding progress
     let inputCount = 0;
     let addTakenCourses = [];
     var addGrades = [];
@@ -24,7 +29,7 @@ export function studentsHomeMain(studentsDb, coursesDb) {
 
 
 
-
+    // This code part handles student adding progress
     let updateInputCount = 0;
     let updateTakenCourses = [];
     var updateGrades = [];
@@ -53,62 +58,20 @@ export function studentsHomeMain(studentsDb, coursesDb) {
     })
 }
 
-function setOptionsOfSelect(coursesDb, selectElem){
-    var courses = coursesDb.getCoursesFromLocalStorage();
-    for (let i = -1; i < courses.length; i++) {
-        var option = document.createElement("option");
-        if (i === -1) {
-            option.value = -1;
-            option.text = "Choose an option";
-        } else{
-            option.value = courses[i].courseId;
-            option.text = courses[i].name;
-        }
-        selectElem.appendChild(option);
-    }
-}
-
 function updateGetAllStudents(studentsDb){
+    /*
+        This function updates get-all-students page (Call this function after adding/updating/deleting a student)
+    */
     var lenStudents = studentsDb.getCountOfAllStudents();
     var lenDiv = document.getElementById("students-length");
     lenDiv.innerHTML = lenStudents;
     setStudentsTable(studentsDb.getStudentsFromLocalStorage(), document.getElementById("students-table"));
 }
 
-function studentAddingForm(studentsDb, addTakenCourses, addGrades) {
-    var studentId = document.getElementById("add-studentId").value;
-    var studentName = document.getElementById("add-studentName").value;
-    var studentSurname = document.getElementById("add-studentSurname").value;
-
-    studentsDb.addStudent({
-        name:studentName,
-        surname:studentSurname,
-        studentId:parseInt(studentId),
-        takenCourses:addTakenCourses,
-        grades:addGrades
-    });
-}
-
-function studentUpdatingForm(studentsDb, updateTakenCourses, updateGrades){
-    var studentId = document.getElementById("update-studentId").value;
-    var studentName = document.getElementById("update-studentName").value;
-    var studentSurname = document.getElementById("update-studentSurname").value;
-
-    studentsDb.updateStudent({
-        name:studentName,
-        surname:studentSurname,
-        studentId:parseInt(studentId),
-        takenCourses:updateTakenCourses,
-        grades:updateGrades
-    });
-}
-
-function studentDeletingForm(studentsDb){
-    var studentId = document.getElementById("delete-studentId").value;
-    studentsDb.deleteStudent(parseInt(studentId));
-}
-
 function setStudentsTable(students, studentsTable, tableHeader = "<tr>" + "<th>Student ID</th>" + "<th>Name</th>" + "<th>Surname</th>" + "<th>GPA</th>" + "<th>Total ACTS</th>" + "</tr>") {
+    /*
+        This function sets students table that's informations comes from the current local storage
+    */
     studentsTable.innerHTML = "";
     studentsTable.innerHTML += tableHeader;
     for (let i = 0; i < students.length; i++) {
@@ -132,7 +95,28 @@ function setStudentsTable(students, studentsTable, tableHeader = "<tr>" + "<th>S
     }
 }
 
+function setOptionsOfSelect(coursesDb, selectElem){
+    /*
+        This functions sets options (courses) of the given select element. 
+    */
+    var courses = coursesDb.getCoursesFromLocalStorage();
+    for (let i = -1; i < courses.length; i++) {
+        var option = document.createElement("option");
+        if (i === -1) {
+            option.value = -1;
+            option.text = "Choose an option";
+        } else{
+            option.value = courses[i].courseId;
+            option.text = courses[i].name;
+        }
+        selectElem.appendChild(option);
+    }
+}
+
 function selectCoursesAndGrades(inputCount, coursesDb, parentOfSelectsId, textInputIdBlueprint, takenCoursesArray){
+    /*
+        This function allows us to get multiple couse information about the student
+    */
     var parentOfSelects = document.getElementById(parentOfSelectsId);
     if (inputCount != coursesDb.getCountOfAllCourses()) {
         inputCount++;
@@ -169,4 +153,46 @@ function selectCoursesAndGrades(inputCount, coursesDb, parentOfSelectsId, textIn
     }
 
     return inputCount;
+}
+
+function studentAddingForm(studentsDb, addTakenCourses, addGrades) {
+    /*
+        This function sends values of the inputs that are inside student adding form to the database class
+    */
+    var studentId = document.getElementById("add-studentId").value;
+    var studentName = document.getElementById("add-studentName").value;
+    var studentSurname = document.getElementById("add-studentSurname").value;
+
+    studentsDb.addStudent({
+        name:studentName,
+        surname:studentSurname,
+        studentId:parseInt(studentId),
+        takenCourses:addTakenCourses,
+        grades:addGrades
+    });
+}
+
+function studentUpdatingForm(studentsDb, updateTakenCourses, updateGrades){
+    /*
+        This function sends values of the inputs that are inside student updating form to the database class
+    */
+    var studentId = document.getElementById("update-studentId").value;
+    var studentName = document.getElementById("update-studentName").value;
+    var studentSurname = document.getElementById("update-studentSurname").value;
+
+    studentsDb.updateStudent({
+        name:studentName,
+        surname:studentSurname,
+        studentId:parseInt(studentId),
+        takenCourses:updateTakenCourses,
+        grades:updateGrades
+    });
+}
+
+function studentDeletingForm(studentsDb){
+    /*
+        This function sends value of the input that are inside student deleting form to the database class
+    */
+    var studentId = document.getElementById("delete-studentId").value;
+    studentsDb.deleteStudent(parseInt(studentId));
 }

@@ -9,12 +9,13 @@ import { getAllStudentsMain } from "./get-all-students.js";
 import { coursesHomeMain } from "./courses-home.js";
 import { getAllCoursesMain } from "./get-all-courses.js";
 
+// Initializing and instantiating database objects
 const studentsDB = new StudentsDatabase();
 studentsDB.setStudentsThenUploadToLocalStorage(studentsJSON);
 const coursesDB = new CoursesDatabase();
 coursesDB.setCoursesThenUploadToLocalStorage(coursesJSON);
 
-/* ACCORDION */
+/* My own accordion codes */
 var accordion = document.getElementsByClassName("accordion");
 for (let i = 0; i < accordion.length; i++) {
     accordion[i].addEventListener("click", function() {
@@ -30,6 +31,7 @@ for (let i = 0; i < accordion.length; i++) {
     })
 }
 
+/* Calling main functions of the different contents */
 studentsHomeMain(studentsDB, coursesDB);
 getAllStudentsMain(studentsDB);
 coursesHomeMain(coursesDB);

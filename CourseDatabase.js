@@ -6,6 +6,9 @@ export class CoursesDatabase{
     }
 
     setCoursesThenUploadToLocalStorage(coursesJSON){
+        /*
+            This function sets courses array and then uploads the array to local storage
+        */
         for (let i = 0; i < coursesJSON.length; i++) {
             this.courses.push(new Course(
                 coursesJSON[i].courseId,
@@ -20,6 +23,9 @@ export class CoursesDatabase{
     }
 
     getCoursesFromLocalStorage(){
+        /*
+            This function returns current state of the courses from the local storage as course object array
+        */
         var coursesLS = JSON.parse(localStorage.getItem("courses"));
         var courses = [];
         for (let i = 0; i < coursesLS.length; i++) {
@@ -36,10 +42,16 @@ export class CoursesDatabase{
     }
 
     getCountOfAllCourses(){
+        /*
+            This function return number of existing courses from the local storage
+        */
         return this.getCoursesFromLocalStorage().length;
     }
 
     getCourseById(courseId){
+        /*
+            This function returns a course object that comes from given course ID from the local storage
+        */
         var courses = this.getCoursesFromLocalStorage();
         for (let i = 0; i < courses.length; i++) {
             if (courses[i].courseId === courseId) {
@@ -49,6 +61,9 @@ export class CoursesDatabase{
     }
 
     getCourseByName(name){
+        /*
+            This function returns courses by course name from the local storage (can return multiple courses)
+        */
         var courses = this.getCoursesFromLocalStorage();
         console.log(courses);
         console.log(name);
@@ -62,6 +77,9 @@ export class CoursesDatabase{
     }
 
     getCoursesByInstructor(instructorName){
+        /*
+            This function returns courses by instructor name from the local storage (can return multiple courses)
+        */
         var courses = this.getCoursesFromLocalStorage();
         var result = [];
         for (let i = 0; i < courses.length; i++) {
@@ -73,6 +91,9 @@ export class CoursesDatabase{
     }
 
     addCourse(course){
+        /*
+            This function adds new course to the local storage
+        */
         var oldData = JSON.parse(localStorage.getItem("courses"));
         oldData.push({
             courseId:course.courseId,
@@ -88,6 +109,9 @@ export class CoursesDatabase{
     }
 
     updateCourse(newCourse){
+        /*
+            This function updates the course that in the local storage. Course ID can not be updated
+        */
         var oldData = JSON.parse(localStorage.getItem("courses"));
         var isFound = false;
         for (let i = 0; i < oldData.length; i++) {
@@ -114,6 +138,9 @@ export class CoursesDatabase{
     }
 
     deleteCourse(courseId){
+        /*
+            This function deletes the course that's course ID is given
+        */
         var oldData = JSON.parse(localStorage.getItem("courses"));
         const indexToDelete = oldData.findIndex(course => course.courseId === courseId);
         if (indexToDelete !== -1) {
