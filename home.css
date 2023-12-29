@@ -1,0 +1,31 @@
+#home h1{
+    color: #66999B;
+    margin-top: 2rem;
+}
+
+#home .user-part{
+    width: 50vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+#home .user-part img{
+    width: 20vw;
+}
+
+#home .user-info{
+    margin-left: 6rem;
+    text-align: left;
+}
+
+#home .user-info h3{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+#msku-photo{
+    width: 100%;
+    margin: 2rem 0;
+    border-radius: 1rem;
+}

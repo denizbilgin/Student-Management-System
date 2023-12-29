@@ -8,6 +8,20 @@
     margin: 1rem 0;
 }
 
+.get-all-students-info{
+    display: flex;
+    margin: 2rem 0;
+    background-color: #faeee2;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.get-all-students-info img{
+    width: 26vw;
+    border-radius: 20px;
+    margin-left: 1.5rem;
+}
+
 #my-student-search-button{
     background-color: #B3AF8F;
     margin-left: 0.5rem;
@@ -24,19 +38,5 @@
 
 #my-student-clear-button:hover{
     background-color: #b44d4d;
-}
-
-.get-all-students-info{
-    display: flex;
-    margin: 2rem 0;
-    background-color: #faeee2;
-    padding: 2rem;
-    border-radius: 2rem;
-}
-
-.get-all-students-info img{
-    width: 26vw;
-    border-radius: 20px;
-    margin-left: 1.5rem;
 }
 

@@ -8,6 +8,20 @@
     margin: 1rem 0;
 }
 
+.get-all-courses-info{
+    display: flex;
+    margin: 2rem 0;
+    background-color: #faeee2;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.get-all-courses-info img{
+    width: 26vw;
+    border-radius: 20px;
+    margin-right: 1.5rem;
+}
+
 #my-course-search-button{
     background-color: #B3AF8F;
     margin-left: 0.5rem;
@@ -24,30 +38,4 @@
 
 #my-course-clear-button:hover{
     background-color: #b44d4d;
-}
-
-.get-all-courses-info{
-    display: flex;
-    margin: 2rem 0;
-    background-color: #faeee2;
-    padding: 2rem;
-    border-radius: 2rem;
-}
-
-.get-all-courses-info img{
-    width: 26vw;
-    border-radius: 20px;
-    margin-right: 1.5rem;
-}
-
-.sample-course-video-part{
-    display: flex;
-    margin: 2rem 0;
-    text-align: left;
-}
-
-.sample-course-video-part video{
-    width: 35vw;
-    border-radius: 20px;
-    margin-left: 1.5rem;
 }

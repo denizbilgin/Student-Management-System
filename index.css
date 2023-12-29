@@ -11,10 +11,10 @@ a{
     color: white;
 }
 
-.content{
-    padding: 5rem 2rem 1rem 2rem;
-}
 
+
+
+/* SCROLL BAR */
 ::-webkit-scrollbar
 {
 	width: 12px;
@@ -28,12 +28,22 @@ a{
 	background-color: #555;
 }
 
+
+
+
+.content{
+    padding: 5rem 2rem 1rem 2rem;
+}
+
+
+
+
 /* USEFUL CLASSES */
-.bg-purple{
+.bg-blue{
     background-color: #66999B;
 }
 
-.purple{
+.blue{
     color: #66999B;
 }
 
@@ -41,6 +51,65 @@ a{
 
     border-bottom: 2px solid #B3AF8F;
     color: #B3AF8F;
+}
+
+
+
+
+/* NAVBAR */
+nav{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 10rem;
+    justify-content: space-between;
+}
+
+.app-title{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+nav .icons-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav .icons-section div{
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-right: 1.4rem;
+}
+
+.icons-section img{
+    height: 1.8rem;
+    margin-right: 0.5rem;
+}
+
+
+
+
+/* ASIDE (Left Bar) */
+aside{
+    height: 51.5vh;
+    width: 20vw;
+    position: fixed;
+    margin-top: 2rem;
+}
+
+aside h3{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+    color: white;
 }
 
 .accordion{
@@ -51,16 +120,6 @@ a{
     transition: 0.4s;
 }
 
-.active, .accordion:hover{
-    background-color: #d6ccc1;
-}
-
-.panel{
-    background-color: white;
-    display: none;
-    overflow: hidden;
-}
-
 .accordion::after{
     content: '\02795';
     font-size: 0.8rem;
@@ -69,8 +128,65 @@ a{
     float: right;
 }
 
+.active, .accordion:hover{
+    background-color: #d6ccc1;
+}
+
 .active::after{
     content: "\2796";
+}
+
+.panel{
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+aside .panel div{
+    padding: 0.7rem 0;
+    font-style: italic;
+    cursor: pointer;
+}
+
+aside .panel div:hover{
+    background-color: #faeee2;
+}
+
+
+
+
+/* MAIN */
+main{
+    width: 70vw;
+    margin-left: 22vw;
+}
+
+.category{
+    display: none;
+}
+
+.category-active{
+    display: block;
+}
+
+.warning{
+    border-radius: 10px;
+    width: 30vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.warning-red{
+    border: 2px solid #b44d4d;
+    background-color: #c46767;
+}
+
+.warning b{
+    margin: 0 4px;
 }
 
 .my-search-part{
@@ -119,69 +235,6 @@ a{
     background-color: #dddddd;
 }
 
-/* NAVBAR */
-nav{
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    padding: 0.8rem 10rem;
-    justify-content: space-between;
-}
-
-nav .icons-section{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-nav .icons-section div{
-    display: flex;
-    align-items: center;
-    color: white;
-    margin-right: 1.4rem;
-}
-
-.icons-section img{
-    height: 1.8rem;
-    margin-right: 0.5rem;
-}
-
-.app-title{
-    color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 3px;
-    cursor: pointer;
-}
-
-/* ASIDE (Left Bar) */
-aside{
-    height: 51.5vh;
-    width: 20vw;
-    position: fixed;
-    margin-top: 2rem;
-}
-
-aside h3{
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    font-size: 1.3rem;
-    padding: 0.5rem 0;
-    color: white;
-}
-
-aside .panel div{
-    padding: 0.7rem 0;
-    font-style: italic;
-    cursor: pointer;
-}
-
-aside .panel div:hover{
-    background-color: #faeee2;
-}
-
 .my-input{
     height: 2rem;
     border-radius: 10px;
@@ -190,67 +243,14 @@ aside .panel div:hover{
     padding: 0 10px;
 }
 
-
-/* MAIN */
-main{
-    width: 70vw;
-    margin-left: 22vw;
+input:user-invalid{
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.171);
 }
 
-.category{
-    display: none;
-}
 
-.category-active{
-    display: block;
-}
 
-#home h1{
-    color: #66999B;
-    margin-top: 2rem;
-}
 
-#home .user-part{
-    width: 50vw;
-    margin: auto;
-    display: flex;
-    align-items: center;
-}
-
-#home .user-part img{
-    width: 20vw;
-}
-
-#home .user-info{
-    margin-left: 6rem;
-    text-align: left;
-}
-
-#home .user-info h3{
-    text-align: left;
-    margin-bottom: 1rem;
-}
-
-#msku-photo{
-    width: 100%;
-    margin: 2rem 0;
-    border-radius: 1rem;
-}
-
-.warning{
-    border-radius: 10px;
-    width: fit-content;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    padding: 0 1rem;
-    margin: 2rem 0;
-}
-
-.warning-red{
-    border: 2px solid #b44d4d;
-    background-color: #c46767;
-}
 
 /* FOOTER */
 footer{
@@ -301,4 +301,165 @@ footer .app-title{
     width: 100%;
     color: white;
     font-weight: bold;
+}
+
+
+/* RESPONSIVE DESIGN */
+/* ================= */
+
+/* For small desktops */
+@media only screen and (max-width: 1206px){
+    /* MAIN */
+    .warning-red b{
+        margin-left: 0px;
+    }
+
+    .my-input{
+        margin-top: 0.5rem;
+    }
+
+    .my-search-bar{
+        width: 50%;
+    }
+}
+
+/* For small laptops */
+@media only screen and (max-width: 1035px){
+    /* NAVBAR */
+    nav{
+        padding: 0.8rem 3rem;
+    }
+
+    .app-title{
+        font-size: 1rem;
+    }
+
+    /* MAIN */
+    .get-all-students-info{
+        flex-direction: column-reverse;
+    }
+
+    .get-all-students-info img, .get-all-courses-info img{
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .get-all-courses-info{
+        flex-direction: column;
+    }
+}
+
+/* For Tablets */
+@media only screen and (max-width: 885px){
+    html{
+        font-size: 12px;
+    }
+
+    /* ASIDE (Left Bar) */
+    aside{
+        position: static;
+        height: fit-content;
+        width: 100%;
+        padding: 0 3rem;
+    }
+
+    .students-buttons b, .courses-buttons b{
+        margin-left: 3rem;
+    }
+
+    /* CONTENT */
+    .content{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #main-content{
+        margin-left: 0;
+        width: 90%;
+        margin: auto;
+    }
+
+    /* MAIN */
+    #students-home h1, #courses-home h1{
+        text-align: center;
+    }
+
+    .student-adding-part, .student-updating-part, .student-deleting-part, .course-adding-part, .course-updating-part, .course-deleting-part {
+        width: 100%;
+    }
+
+    .student-home-info, .courses-home-info{
+        width: 100%;
+    }
+
+    #home .user-part{
+        flex-direction: column;
+        margin-bottom: 4rem;
+    }
+
+    #home .user-part img{
+        width: 35vw;
+    }
+
+    #home .user-info, #home .user-info h3{
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+/* For phones */
+@media only screen and (max-width: 580px){
+    /* NAVBAR */
+    nav{
+        flex-direction: column;
+        padding: 0.8rem 1rem;
+        font-size: 1.3rem;
+    }
+
+    .app-title{
+        margin-bottom: 0.5rem;
+    }
+
+    /* ASIDE (Left Bar) */
+    aside{
+        margin-top: 4rem;
+    }
+
+    /* MAIN */
+    .my-table td, th {
+        padding: 4px;
+    }
+
+    #add-takenCourse-button, #update-takenCourse-button{
+        width: 100%;
+    }
+
+    #adding-takenCourses select{
+        width: 18rem;
+    }
+
+    /* FOOTER */
+    footer{
+        font-size: 1.2rem;
+    }
+
+    footer .app-title{
+        font-size: 2rem;
+    }
+
+    .footer-content{
+        flex-direction: column;
+    }
+
+    .footer-content > div{
+        margin-bottom: 2rem;
+    }
+}
+
+/* For Small phones */
+@media only screen and (max-width: 510px){
+    html{
+        font-size: 9px;
+    }
 }

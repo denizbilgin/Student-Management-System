@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MSKU OBS</title>
-    <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./students-home.css">
     <link rel="stylesheet" href="./get-all-students.css">
     <link rel="stylesheet" href="./courses-home.css">
     <link rel="stylesheet" href="./get-all-courses.css">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./index.css">
     <script src="./app.js" defer type="module"></script>
 </head>
 <body>
@@ -31,7 +32,7 @@
     </script>
 
     <!-- NAVBAR -->
-    <nav class="bg-purple">
+    <nav class="bg-blue">
         <div class="app-title" onclick="mainChanger('home')"><h1>MSKU OBS</h1></div>
         <div class="icons-section">
             <div>
@@ -56,7 +57,7 @@
     <div class="content">
         <!-- LEFTBAR -->
         <aside>
-            <h3 class="bg-purple">Categorizes</h3>
+            <h3 class="bg-blue">Categorizes</h3>
             <div class="categorizes">
                 <div class="students-buttons accordion">
                     <b>Students</b>
@@ -86,6 +87,8 @@
 
         <!-- MAIN CONTENT -->
         <main id="main-content">
+
+            <!-- MAIN HOME CATEGORY  -->
             <div id="home" class="category category-active">
                 <h1>Home</h1>
                 <div class="user-part">
@@ -102,9 +105,11 @@
                 </p>
                 <img id="msku-photo" src="./imgs/msku.jpeg" alt="MSKU">
             </div>
+
+            <!-- STUDENTS HOME CATEGORY  -->
             <div id="students-home" class="category">
                 <h1>Students Home</h1>
-                <div style="background-color: #faeee2; width: 70%; padding: 2rem; border-radius: 2rem; margin: 2rem 0;">
+                <div class="student-home-info">
                     <img id="student-home-img" src="./imgs/doing-homework-together.jpg" alt="Team Working">
                     <p style="text-align: left;">
                         We have many students at MSKU. Since you have admin authorization, you can easily 
@@ -112,7 +117,7 @@
                         has been developed with your comfort in mind.
                     </p>
                     <div class="warning warning-red">
-                        Be careful about deleting. This process will <b style="margin: 0 4px;">not</b> be able to <i style="margin-left: 4px;">recoverable</i>.
+                        Be careful about deleting. This process will <b>not</b> be able to <i style="margin-left: 4px;">recoverable</i>.
                     </div>
                 </div>
                 <div class="inputs-part">
@@ -161,6 +166,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- GET ALL STUDENTS CATEGORY  -->
             <div id="get-all-students" class="category">
                 <h1>All Students</h1>
                 <div class="get-all-students-info">
@@ -183,9 +190,11 @@
                     </table>
                 </div>
             </div>
+
+            <!-- COURSES HOME CATEGORY  -->
             <div id="courses-home" class="category">
                 <h1>Courses Home</h1>
-                <div style="background-color: #faeee2; width: 70%; padding: 2rem; border-radius: 2rem; margin: 2rem 0;">
+                <div class="courses-home-info">
                     <img id="courses-home-img" src="./imgs/lesson.jpg" alt="Lesson">
                     <p style="text-align: left;">
                         There are a lot of courses in MSKU. In this page of the student management systems
@@ -193,7 +202,7 @@
                         For example, you can add course, update course or delete course from the database of ours.
                     </p>
                     <div class="warning warning-red">
-                        Be careful about deleting. This process will <b style="margin: 0 4px;">not</b> be able to <i style="margin-left: 4px;">recoverable</i>.
+                        Be careful about deleting. This process will <b>not</b> be able to <i style="margin-left: 4px;">recoverable</i>.
                 </div>
                 </div>
                 <div class="inputs-part">
@@ -255,6 +264,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- GET ALL CATEGORY  -->
             <div id="get-all-courses" class="category">
                 <h1>All Courses</h1>
                 <div class="get-all-courses-info">
@@ -274,14 +285,13 @@
                     <table id="courses-table" class="my-table">
                     </table>
                 </div>
-            </div>
-            
+            </div>           
         </main>
 
     </div>
 
     <!-- FOOTER -->
-    <footer class="bg-purple">
+    <footer class="bg-blue">
         <div class="app-title">MSKU OBS</div>
         <div class="footer-content">
             <div class="footer-communication">
@@ -318,5 +328,5 @@ YAPILACAKLAR:
 *   - Tüm sayfaları güzel hale getir
     - Mobil için siteyi düzelt
     - Programını pdf'teki use caselerle test et
-    - Kodları düzenle, Yorum satırları ekle
+*   - CSS kodlarını düzenle
 -->

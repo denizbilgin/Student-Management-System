@@ -8,6 +8,14 @@
     text-align: left;
 }
 
+.student-home-info{
+    background-color: #faeee2;
+    width: 70%;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin: 2rem 0;
+}
+
 #students-home p{
     margin: 2rem 0;
     width: 70%;
@@ -25,9 +33,8 @@
     object-fit: cover;
 }
 
-.student-adding-part .my-button, .student-updating-part .my-button{
-    background-color: #B3AF8F;
-    margin-top: 1rem;
+#student-adding-form, #student-updating-form, #student-deleting-form{
+    text-align: left;
 }
 
 .student-adding-part, .student-updating-part, .student-deleting-part{
@@ -44,8 +51,21 @@
     display: block;
 }
 
-#student-adding-form, #student-updating-form, #student-deleting-form{
-    text-align: left;
+.student-adding-part .my-button, .student-updating-part .my-button{
+    background-color: #B3AF8F;
+    margin-top: 1rem;
+}
+
+#student-add-button:hover, #student-update-button:hover{
+    background-color: #979479;
+}
+
+.student-deleting-part .my-button{
+    background-color: #b85c5c;
+}
+
+.student-deleting-part .my-button:hover{
+background-color: #b44d4d;
 }
 
 #student-add-button, #student-update-button, #student-delete-button{
@@ -64,10 +84,4 @@
     margin-bottom: 1rem;
 }
 
-.student-deleting-part .my-button{
-    background-color: #b85c5c;
-}
 
-.student-deleting-part .my-button:hover{
-background-color: #b44d4d;
-}
