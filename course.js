@@ -57,5 +57,20 @@ export class Course{
         }
         return total/numberOfStudents;
     }
+
+    getFailedStudentsCount(){
+        /*
+            This function return number of failed students' count
+        */
+        var takerStudents = this.getStudents();
+        var failedStudents = 0;
+        for (let i = 0; i < takerStudents.length; i++) {
+            const student = takerStudents[i];
+            if (student.calculatePointByScale(this.courseId) === "FF" || student.calculatePointByScale(this.courseId) === "DD") {
+                failedStudents++;
+            }
+        }
+        return failedStudents;
+    }
 }
 

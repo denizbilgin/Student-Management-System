@@ -41,7 +41,7 @@ function setCoursesTable(courses, coursesTable, tableHeader = "<tr>" + "<th>Cour
             "<td>" + course.instructor + "</td>" +
             "<td>" + course.acts + "</td>" +
             "<td>" + course.midtermPercent + "% - " + course.finalPercent + "%</td>" +
-            "<td>" + course.getNumberOfStudents() + "</td>" +
+            "<td>" + course.getNumberOfStudents() + " (" + course.getFailedStudentsCount() + "F/" + (course.getNumberOfStudents()-course.getFailedStudentsCount()) +"P)</td>" +
             "<td>" + course.getAverageScore().toFixed(2) + "</td>" +
             "</tr>";
             coursesTable.innerHTML += courseInfo;

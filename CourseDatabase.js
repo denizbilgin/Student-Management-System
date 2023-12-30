@@ -163,6 +163,9 @@ export class CoursesDatabase{
     }
 
     isCourseIdValid(courseId){
+        /*
+            This function checks is course id valid
+        */
         if (this.getCourseById(courseId) !== -1) {
             console.log(`Course with course ID ${courseId} is already EXISTS.\nYou should enter unique course ID.`);
             return false;
@@ -171,6 +174,9 @@ export class CoursesDatabase{
     }
 
     isMidtermPercentValid(midtermPercent){
+        /*
+            This function checks is midterm percent valid
+        */
         if (midtermPercent < 1 || midtermPercent > 99) {
             console.log(`Midterm percent of any course can not be larger than 99.`);
             return false;

@@ -252,7 +252,6 @@ input:user-invalid{
 
 
 
-
 /* FOOTER */
 footer{
     display: flex;
@@ -406,6 +405,14 @@ footer .app-title{
     #home .user-info, #home .user-info h3{
         margin-left: 0;
         text-align: center;
+    }
+
+    .modal-body{
+        flex-direction: column;
+    }
+
+    .close{
+        font-size: 1.6rem;
     }
 }
 

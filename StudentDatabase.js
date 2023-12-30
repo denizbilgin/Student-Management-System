@@ -77,8 +77,8 @@ export class StudentsDatabase{
         /*
             This function adds new student to the local storage
         */
-        if (this.isStudentIdValid(student.studentId) === false) {
-                return -1;
+        if (this.isStudentIdValid(student.studentId) === false || this.isCoursesOfStudentsValid(student) === false) {
+            return -1;
         }
         var oldData = JSON.parse(localStorage.getItem("students"));
         oldData.push({
@@ -96,6 +96,9 @@ export class StudentsDatabase{
         /*
             This function updates the student that in the local storage. Student ID can not be updated
         */
+        if (this.isCoursesOfStudentsValid(student) === false) {
+            return -1;
+        }
         var oldData = JSON.parse(localStorage.getItem("students"));
         var isFound = false;
         for (let i = 0; i < oldData.length; i++) {
@@ -137,9 +140,26 @@ export class StudentsDatabase{
     }
 
     isStudentIdValid(studentId){
+        /*
+            This function checks is student id valid
+        */
         if(this.getStudentById(studentId) !== -1){
             console.log(`Student with student ID ${studentId} is already EXISTS.\nYou should enter unique student ID.`);
             return false;
+        }
+        return true;
+    }
+
+    isCoursesOfStudentsValid(student){
+        /*
+            This function checks is courses of student valid
+        */
+        for (let i = 0; i < student.takenCourses.length; i++) {
+            var count = student.takenCourses.filter(num => num === student.takenCourses[i]).length;
+            if (count > 1) {
+                console.log(`Any student with can not take any course twice. (Course number ${student.takenCourses[i]}) repeated.`)
+                return false;
+            }
         }
         return true;
     }

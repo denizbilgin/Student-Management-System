@@ -33,7 +33,6 @@ for (let i = 0; i < accordion.length; i++) {
 
 /* Calling main functions of the different contents */
 studentsHomeMain(studentsDB, coursesDB);
-getAllStudentsMain(studentsDB);
+getAllStudentsMain(studentsDB, coursesDB);
 coursesHomeMain(coursesDB);
 getAllCoursesMain(coursesDB);
-
