@@ -58,6 +58,7 @@ export class CoursesDatabase{
                 return courses[i];
             }
         }
+        return -1;
     }
 
     getCourseByName(name){
@@ -94,6 +95,9 @@ export class CoursesDatabase{
         /*
             This function adds new course to the local storage
         */
+        if (this.isCourseIdValid(course.courseId) === false || this.isMidtermPercentValid(course.midtermPercent) === false) {
+            return -1;
+        }
         var oldData = JSON.parse(localStorage.getItem("courses"));
         oldData.push({
             courseId:course.courseId,
@@ -112,6 +116,9 @@ export class CoursesDatabase{
         /*
             This function updates the course that in the local storage. Course ID can not be updated
         */
+       if (this.isMidtermPercentValid(newCourse.midtermPercent) === false) {
+            return -1;
+       }
         var oldData = JSON.parse(localStorage.getItem("courses"));
         var isFound = false;
         for (let i = 0; i < oldData.length; i++) {
@@ -129,6 +136,7 @@ export class CoursesDatabase{
 
         if (!isFound) {
             console.log(`Course with ID ${newCourse.courseId} not found.`);
+            return -1;
         }
         else {
             localStorage.setItem("courses", JSON.stringify(oldData));
@@ -150,6 +158,23 @@ export class CoursesDatabase{
         }
         else {
             console.log(`Course with ID ${courseId} not found.`);
+            return -1;
         }
+    }
+
+    isCourseIdValid(courseId){
+        if (this.getCourseById(courseId) !== -1) {
+            console.log(`Course with course ID ${courseId} is already EXISTS.\nYou should enter unique course ID.`);
+            return false;
+        }
+        return true;
+    }
+
+    isMidtermPercentValid(midtermPercent){
+        if (midtermPercent < 1 || midtermPercent > 99) {
+            console.log(`Midterm percent of any course can not be larger than 99.`);
+            return false;
+        }
+        return true;
     }
 }

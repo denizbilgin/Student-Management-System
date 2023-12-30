@@ -56,6 +56,7 @@ export class StudentsDatabase{
                 return students[i];
             }
         }
+        return -1;
     }
 
     getStudentsByName(name){
@@ -76,6 +77,9 @@ export class StudentsDatabase{
         /*
             This function adds new student to the local storage
         */
+        if (this.isStudentIdValid(student.studentId) === false) {
+                return -1;
+        }
         var oldData = JSON.parse(localStorage.getItem("students"));
         oldData.push({
             name:student.name,
@@ -107,6 +111,7 @@ export class StudentsDatabase{
 
         if (!isFound) {
             console.log(`Student with ID ${newStudent.studentId} not found.`);
+            return -1;
         }
         else {
             localStorage.setItem("students", JSON.stringify(oldData));
@@ -127,6 +132,15 @@ export class StudentsDatabase{
         }
         else {
             console.log(`Student with ID ${studentId} not found.`);
+            return -1;
         }
+    }
+
+    isStudentIdValid(studentId){
+        if(this.getStudentById(studentId) !== -1){
+            console.log(`Student with student ID ${studentId} is already EXISTS.\nYou should enter unique student ID.`);
+            return false;
+        }
+        return true;
     }
 }
