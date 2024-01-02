@@ -1,4 +1,4 @@
-import {CoursesDatabase} from "./CourseDatabase.js";
+import {CoursesDatabase} from "/CourseDatabase.js";
 
 export class Student{
     constructor(name, surname, studentId, grades, takenCourses){
